@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConnectGroup BkColor="white" device="Win32&#32;(800x600)" Font="Default,0" height="600" Statusbar="true" Title="2019_MiplatfromEducation" titlebar="true" version="1.0" width="800" work_height="543" work_width="800">
+	<container Version="1000">
+		<Component Height="21" Id="Spin" Image="10" Name="cySpin" Title="Spin" Version="1000" Width="121"/>
+		<Component Height="21" Id="MaskEdit" Image="19" Name="cyMaskedit" Title="MaskEdit" Version="1000" Width="121"/>
+		<Component Height="21" Id="Button" Image="2" Name="cyButton" Title="Button" Version="1000" Width="104"/>
+		<Component Height="13" Id="Static" Image="8" Name="cyStatic" Title="Static" Version="1000" Width="40"/>
+		<Component Height="21" Id="Edit" Image="3" Name="cyEdit" Title="Edit" Version="1000" Width="121"/>
+		<Component Height="65" Id="Shape" Image="28" Name="cyShape" Title="Shape" Version="1000" Width="65"/>
+		<Component Height="65" Id="Pie" Image="30" Name="cyPie" Title="Pie" Version="1000" Width="65"/>
+		<Component Height="21" Id="Checkbox" Image="4" Name="cyCheckBox" Title="Check&#32;Box" Version="1000" Width="97"/>
+		<Component Height="24" Id="FileDialog" Image="18" Name="cyFileDialog" Title="File&#32;Dialog" Version="1000" Width="24"/>
+		<Component Height="24" Id="File" Image="25" Name="cyFile" Title="File" Version="1000" Width="24"/>
+		<Component Height="97" Id="List" Image="6" Name="cyListBox" Title="List" Version="1000" Width="145"/>
+		<Component Height="21" Id="Combo" Image="5" Name="cyComboEx" Title="ComboBox" Version="1000" Width="145"/>
+		<Component Height="21" Id="Radio" Image="7" Name="cyRadio" Title="Radio" Version="1000" Width="113"/>
+		<Component Height="72" Id="TextArea" Image="16" Name="cyTextArea" Title="Text&#32;Area" Version="1000" Width="185"/>
+		<Component Height="17" Id="Progressbar" Image="31" Name="cyProgressbar" Title="Progressbar" Version="1000" Width="150"/>
+		<Component Height="97" Id="TreeView" Image="11" Module="CyTreeView" Name="cyTreeView" Title="Tree&#32;View" Version="1000" Width="121"/>
+		<Component Height="120" Id="Grid" Image="1" Module="CyGrid" Name="cyGrid" Title="Grid" Version="1000" Width="320"/>
+		<Component Height="105" Id="Image" Image="9" Name="cyImage" Title="Image" Version="1000" Width="105"/>
+		<Component Height="21" Id="Calendar" Image="13" Module="CyCalendarEx" Name="cyCalendarEx" Title="Calendar" Version="1000" Width="145"/>
+		<Component Height="193" Id="Div" Image="20" Name="cyDiv" Title="Division" Version="1000" Width="289"/>
+		<Component Id="PopupDiv" Image="54" Name="CyPopupDiv" Title="Popup&#32;Div" Version="1000"/>
+		<Component Height="193" Id="Tab" Image="12" Name="cyTab" Title="Tab" Version="1000" Width="289"/>
+		<Component Height="260" Id="WebBrowser" Image="24" Module="CyWebBrowser" Name="cyWebBrowser" Title="WebBrowser" Version="1000" Width="364"/>
+		<Component Height="168" Id="swFlash" Image="27" Module="CySWFlash" Name="cySWFlash" Title="Flash" Version="1000" Width="248"/>
+		<Component Height="24" Id="MenuBar" Image="32" Module="CyMenuBar" Name="cyMenuBar" Title="MenuBar" Version="1000" Width="192"/>
+		<Component Height="50" Id="Split" Image="55" Module="CySplit" Name="cySplit" Title="Split" Version="1000" Width="8"/>
+		<Component Height="8" Id="SplitJoint" Image="56" Module="CySplitU" Name="cySplitJoint" Title="SplitJoint" Version="1000" Width="8"/>
+		<Component Height="50" Id="Sign" Image="57" Module="CySign" Name="cySign" Title="Sign" Version="1000" Width="50"/>
+	</container>
+	<protocols version="1000">
+		<protocol id="file" name="cyHttpAdp" version="1000"/>
+		<protocol id="http" name="cyHttpAdp" version="1000"/>
+		<protocol id="https" name="cyHttpAdp" version="1000"/>
+	</protocols>
+	<AppGroups>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="Parts" Type="form" Version="1000">
+			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Script\"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="Services" Type="form" Version="1000">
+			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Script\"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="Sales" Type="form" Version="1000">
+			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Script\"/>
+		</AppGroup>
+		<AppGroup CodePage="utf-8" Language="1042" Prefix="Commons" Type="form" Version="1000">
+			<Script Baseurl="C:\Users\2019_MiplatfromEducation\019_MiplatfromEducation\Commons\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
+		</AppGroup>
+	</AppGroups>
+	<Script></Script>
+	<Datasets>
+		<Dataset DataSetType="Dataset" Id="GDS_COMPANY">
+			<Contents>
+				<colinfo id="BIZ_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_CALL_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_CEO_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_ADDR" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_TYPE" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<record>
+					<BIZ_ADDR>서울시&#32;성북구&#32;가리동</BIZ_ADDR>
+					<BIZ_CALL_NO>02-923-2125</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>111-12-11255</BIZ_ID>
+					<BIZ_NM>천하통일통신</BIZ_NM>
+					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;성북구&#32;도봉산동</BIZ_ADDR>
+					<BIZ_CALL_NO>02-998-0121</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>787-15-18433</BIZ_ID>
+					<BIZ_NM>천하AS</BIZ_NM>
+					<BIZ_TYPE>SERVICES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;서초구&#32;나무동</BIZ_ADDR>
+					<BIZ_CALL_NO>02-912-4121</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>423-16-24232</BIZ_ID>
+					<BIZ_NM>신화통신</BIZ_NM>
+					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;광진구&#32;화양동</BIZ_ADDR>
+					<BIZ_CALL_NO>02-991-1006</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>234-12-12121</BIZ_ID>
+					<BIZ_NM>광진통신</BIZ_NM>
+					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;광진구&#32;화양동</BIZ_ADDR>
+					<BIZ_CALL_NO>02-991-1006</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>457-12-48081</BIZ_ID>
+					<BIZ_NM>광진AS</BIZ_NM>
+					<BIZ_TYPE>SERVICES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;광진구</BIZ_ADDR>
+					<BIZ_CALL_NO>02-952-2313</BIZ_CALL_NO>
+					<BIZ_CEO_NM>000</BIZ_CEO_NM>
+					<BIZ_ID>234-12-15891</BIZ_ID>
+					<BIZ_NM>본사</BIZ_NM>
+					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_CUSTOMER">
+			<Contents>
+				<colinfo id="BIZ_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_TYPE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_CALL_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_HP_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_ADDR" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<record>
+					<BIZ_ID>111-12-11255</BIZ_ID>
+					<CU_ADDR>서울시&#32;동대문구&#32;이문동</CU_ADDR>
+					<CU_CALL_NO>02-912-6203</CU_CALL_NO>
+					<CU_HP_NO>010-7959-3039</CU_HP_NO>
+					<CU_ID>1</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ID>111-12-11255</BIZ_ID>
+					<CU_ADDR>경기도&#32;화양시&#32;화천동</CU_ADDR>
+					<CU_CALL_NO>02-902-3124</CU_CALL_NO>
+					<CU_HP_NO>010-5864-6395</CU_HP_NO>
+					<CU_ID>2</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SERVICES</CU_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ID>423-16-24232</BIZ_ID>
+					<CU_ADDR></CU_ADDR>
+					<CU_CALL_NO>02-766-4494</CU_CALL_NO>
+					<CU_HP_NO>010-4230-1611</CU_HP_NO>
+					<CU_ID>3</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+				<record>
+					<BIZ_ID>234-12-12121</BIZ_ID>
+					<CU_ADDR></CU_ADDR>
+					<CU_CALL_NO>02-064-4443</CU_CALL_NO>
+					<CU_HP_NO>010-0423-4443</CU_HP_NO>
+					<CU_ID>4</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>N</NEW_YN>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_PRODUCT">
+			<Contents>
+				<colinfo id="PD_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_WHOLESALES_PRICE" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_RETAIL_PRICE" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_IMG" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_STOCK" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<record>
+					<NEW_YN>N</NEW_YN>
+					<PD_ID>SE-001</PD_ID>
+					<PD_IMG>SE-001</PD_IMG>
+					<PD_NM>SE-1</PD_NM>
+					<PD_RETAIL_PRICE>1200000</PD_RETAIL_PRICE>
+					<PD_STOCK>10</PD_STOCK>
+					<PD_WHOLESALES_PRICE>900000</PD_WHOLESALES_PRICE>
+				</record>
+				<record>
+					<NEW_YN>N</NEW_YN>
+					<PD_ID>SE-002</PD_ID>
+					<PD_IMG>SE-002</PD_IMG>
+					<PD_NM>SE-2</PD_NM>
+					<PD_RETAIL_PRICE>990000</PD_RETAIL_PRICE>
+					<PD_STOCK>10</PD_STOCK>
+					<PD_WHOLESALES_PRICE>750000</PD_WHOLESALES_PRICE>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_USERS">
+			<Contents>
+				<colinfo id="USER_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="USER_LOGIN_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="USER_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="USER_HP" size="256" summ="default" type="STRING"/>
+				<colinfo id="USER_RANK" size="256" summ="default" type="STRING"/>
+				<colinfo id="USER_LEVEL" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<record>
+					<BIZ_ID>234-12-15891</BIZ_ID>
+					<NEW_YN>N</NEW_YN>
+					<USER_HP>02-952-2313</USER_HP>
+					<USER_ID>1</USER_ID>
+					<USER_LEVEL>SALES,&#32;SERVICES,&#32;PARTS</USER_LEVEL>
+					<USER_LOGIN_ID>LOGIN1</USER_LOGIN_ID>
+					<USER_NM>000</USER_NM>
+					<USER_RANK>대리</USER_RANK>
+				</record>
+				<record>
+					<BIZ_ID>423-16-24232</BIZ_ID>
+					<NEW_YN>N</NEW_YN>
+					<USER_HP>010-7843-2213</USER_HP>
+					<USER_ID>2</USER_ID>
+					<USER_LEVEL>SALES</USER_LEVEL>
+					<USER_LOGIN_ID>LOGIN2</USER_LOGIN_ID>
+					<USER_NM>000</USER_NM>
+					<USER_RANK>사원</USER_RANK>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_CODE">
+			<Contents>
+				<colinfo id="TAST_TYPE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_EX" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_ENG_EX" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<CODE>SALES</CODE>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>판매</CODE_NM>
+					<TAST_TYPE>GDS_001</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>SERVICES</CODE>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>서비스</CODE_NM>
+					<TAST_TYPE>GDS_001</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>PARTS</CODE>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>부품</CODE_NM>
+					<TAST_TYPE>GDS_001</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>SALES</CODE>
+					<CODE_ENG_EX>CU_TYPE</CODE_ENG_EX>
+					<CODE_EX>고객구분</CODE_EX>
+					<CODE_NM>일반고객</CODE_NM>
+					<TAST_TYPE>GDS_002</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>SERVICES</CODE>
+					<CODE_ENG_EX>CU_TYPE</CODE_ENG_EX>
+					<CODE_EX>고객구분</CODE_EX>
+					<CODE_NM>서비스고객</CODE_NM>
+					<TAST_TYPE>GDS_002</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>SALES</CODE>
+					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
+					<CODE_EX>사업구분</CODE_EX>
+					<CODE_NM>판매처</CODE_NM>
+					<TAST_TYPE>GDS_003</TAST_TYPE>
+				</record>
+				<record>
+					<CODE>SERVICES</CODE>
+					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
+					<CODE_EX>사업구분</CODE_EX>
+					<CODE_NM>서비스센터</CODE_NM>
+					<TAST_TYPE>GDS_003</TAST_TYPE>
+				</record>
+				<record>
+					<CODE></CODE>
+					<CODE_ENG_EX></CODE_ENG_EX>
+					<CODE_EX></CODE_EX>
+					<CODE_NM></CODE_NM>
+					<TAST_TYPE></TAST_TYPE>
+				</record>
+				<record>
+					<CODE></CODE>
+					<CODE_ENG_EX></CODE_ENG_EX>
+					<CODE_EX></CODE_EX>
+					<CODE_NM></CODE_NM>
+					<TAST_TYPE></TAST_TYPE>
+				</record>
+				<record>
+					<CODE></CODE>
+					<CODE_ENG_EX></CODE_ENG_EX>
+					<CODE_EX></CODE_EX>
+					<CODE_NM></CODE_NM>
+					<TAST_TYPE></TAST_TYPE>
+				</record>
+				<record>
+					<CODE></CODE>
+					<CODE_ENG_EX></CODE_ENG_EX>
+					<CODE_EX></CODE_EX>
+					<CODE_NM></CODE_NM>
+					<TAST_TYPE></TAST_TYPE>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_001">
+			<Contents>
+				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<CODE>SALES</CODE>
+					<CODE_NM>판매처</CODE_NM>
+				</record>
+				<record>
+					<CODE>SERVICES</CODE>
+					<CODE_NM>서비스센터</CODE_NM>
+				</record>
+			</Contents>
+		</Dataset>
+	</Datasets>
+</ConnectGroup>

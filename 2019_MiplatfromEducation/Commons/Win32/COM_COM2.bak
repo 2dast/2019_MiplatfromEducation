@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="COM_COM2" Left="8" PidAttrib="7" Title="공통화면2" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Grid BoldHead="true" Bottom="523" Enable="true" EndLineColor="default" Height="427" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" Right="408" TabOrder="1" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="400"></Grid>
+		<Edit Height="21" Id="edt_" Left="88" TabOrder="2" Text="조회조건&#32;1" Top="16" Width="121"></Edit>
+		<Static Height="13" Id="st_" Left="31" TabOrder="3" Text="조회조건&#32;1" Top="19" Width="49"></Static>
+		<Static Height="13" Id="Static0" Left="31" TabOrder="5" Text="조회조건&#32;3" Top="51" Width="49"></Static>
+		<Edit Height="21" Id="Edit0" Left="88" TabOrder="4" Text="조회조건&#32;1" Top="48" Width="121"></Edit>
+		<Static Height="13" Id="Static1" Left="231" TabOrder="7" Text="조회조건&#32;2" Top="19" Width="49"></Static>
+		<Edit Height="21" Id="Edit1" Left="288" TabOrder="6" Text="조회조건&#32;2" Top="16" Width="121"></Edit>
+		<Button Height="21" Id="btn" Left="527" TabOrder="8" Text="버튼&#32;1" Top="16" Width="80"></Button>
+		<Button Height="21" Id="Button1" Left="615" TabOrder="9" Text="버튼&#32;2" Top="16" Width="80"></Button>
+		<Button Height="21" Id="Button2" Left="704" TabOrder="10" Text="버튼&#32;3" Top="16" Width="80"></Button>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="11" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="5" Width="782"></Static>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="424" Id="Static2" Left="416" TabOrder="12" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="96" Width="372"></Static>
+	</Form>
+	<Script></Script>
+</Window>

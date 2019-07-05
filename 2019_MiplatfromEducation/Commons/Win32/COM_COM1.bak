@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="COM_COM1" Left="8" PidAttrib="7" Title="공통화면1" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Grid AutoFit="TRUE" BindDataset="GDS_COMPANY" BkColor2="default" BoldHead="true" Bottom="363" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="grd_List_OnCellClick" Right="792" TabOrder="1" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="236"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="법인명"/>
+						<cell col="1" display="text" text="CEO"/>
+						<cell col="2" display="text" text="전화번호"/>
+						<cell col="3" display="text" text="주소"/>
+						<cell col="4" display="text" text="사업소구분"/>
+					</head>
+					<body>
+						<cell align="center" col="0" colid="BIZ_NM" display="text"/>
+						<cell align="center" col="1" colid="BIZ_CEO_NM" display="text"/>
+						<cell align="center" col="2" colid="BIZ_CALL_NO" display="text"/>
+						<cell align="left" col="3" colid="BIZ_ADDR" display="text"/>
+						<cell align="center" col="4" colid="BIZ_TYPE" combocol="CODE" combodataset="GDS_001" combotext="CODE_NM" display="combo" edit="combo"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="2" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="5" Width="782"></Static>
+		<Edit Height="21" Id="edt_" Left="88" TabOrder="3" Text="조회조건&#32;1" Top="16" Width="121"></Edit>
+		<Static Height="13" Id="st_" Left="31" TabOrder="4" Text="조회조건&#32;1" Top="19" Width="49"></Static>
+		<Static Height="13" Id="Static0" Left="31" TabOrder="6" Text="조회조건&#32;3" Top="51" Width="49"></Static>
+		<Edit Height="21" Id="Edit0" Left="88" TabOrder="5" Text="조회조건&#32;3" Top="48" Width="121"></Edit>
+		<Static Height="13" Id="Static1" Left="231" TabOrder="8" Text="조회조건&#32;2" Top="19" Width="49"></Static>
+		<Edit Height="21" Id="Edit1" Left="288" TabOrder="7" Text="조회조건&#32;2" Top="16" Width="121"></Edit>
+		<Button Height="21" Id="btn" Left="527" TabOrder="9" Text="버튼&#32;1" Top="16" Width="80"></Button>
+		<Button Height="21" Id="Button1" Left="615" TabOrder="10" Text="버튼&#32;2" Top="16" Width="80"></Button>
+		<Button Height="21" Id="Button2" Left="704" TabOrder="11" Text="버튼&#32;3" Top="16" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="10" TabOrder="12" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="370" Width="780"></Static>
+	</Form>
+	<Script><![CDATA[
+function grd_List_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	trace(GDS_COMPANY.getColumn(nRow, "BIZ_CEO_NM"));
+}
+
+]]></Script>
+</Window>
