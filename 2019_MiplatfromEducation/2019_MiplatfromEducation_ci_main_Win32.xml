@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ConnectGroup BkColor="white" device="Win32&#32;(800x600)" Font="Default,0" height="600" Statusbar="true" Title="2019_MiplatfromEducation" titlebar="true" version="1.0" width="800" work_height="543" work_width="800">
 	<container Version="1000">
 		<Component Height="21" Id="Spin" Image="10" Name="cySpin" Title="Spin" Version="1000" Width="121"/>
@@ -46,7 +46,7 @@
 			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Script\"/>
 		</AppGroup>
 		<AppGroup CodePage="utf-8" Language="1042" Prefix="Commons" Type="form" Version="1000">
-			<Script Baseurl="D:\2019_MiplatfromEducation\019_MiplatfromEducation\Commons\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
+			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
 		</AppGroup>
 	</AppGroups>
 	<Script></Script>
@@ -239,7 +239,7 @@
 				<record>
 					<CODE>SALES</CODE>
 					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
-					<CODE_EX>업무구분</CODE_EX>
+					<CODE_EX>무구분</CODE_EX>
 					<CODE_NM>판매</CODE_NM>
 					<TAST_TYPE>GDS_001</TAST_TYPE>
 				</record>
@@ -247,7 +247,7 @@
 					<CODE>SERVICES</CODE>
 					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
 					<CODE_EX>업무구분</CODE_EX>
-					<CODE_NM>서비스</CODE_NM>
+					<CODE_NM>서비</CODE_NM>
 					<TAST_TYPE>GDS_001</TAST_TYPE>
 				</record>
 				<record>
