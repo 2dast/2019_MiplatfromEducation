@@ -37,16 +37,16 @@
 	</protocols>
 	<AppGroups>
 		<AppGroup CodePage="utf-8" Language="1042" Prefix="Parts" Type="form" Version="1000">
-			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Script\"/>
+			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Parts\Script\"/>
 		</AppGroup>
 		<AppGroup CodePage="utf-8" Language="1042" Prefix="Services" Type="form" Version="1000">
-			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Script\"/>
+			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Services\Script\"/>
 		</AppGroup>
 		<AppGroup CodePage="utf-8" Language="1042" Prefix="Sales" Type="form" Version="1000">
-			<Script Baseurl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Script\"/>
+			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Sales\Script\"/>
 		</AppGroup>
 		<AppGroup CodePage="utf-8" Language="1042" Prefix="Commons" Type="form" Version="1000">
-			<Script Baseurl="C:\Users\2019_MiplatfromEducation\019_MiplatfromEducation\Commons\Win32\" ScriptUrl="C:\Users\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
+			<Script Baseurl="D:\2019_MiplatfromEducation\019_MiplatfromEducation\Commons\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
 		</AppGroup>
 	</AppGroups>
 	<Script></Script>
