@@ -92,7 +92,6 @@ function btn_search_OnClick(obj)
 	var pFilter = "";
 
 	if (length(edt_userNm.Value) != 0) {
-		if (length(pFilter) !=0) pFilter += " && ";
 		
 		pFilter += "USER_NM=="+quote(edt_userNm.Text);
 	}
@@ -100,7 +99,7 @@ function btn_search_OnClick(obj)
 	if (length(edt_Rank.Value) != 0) {
 		if (length(pFilter) !=0) pFilter += " && ";
 	
-		pFilter += "&&USER_RANK=="+quote(edt_Rank.Text);
+		pFilter += "USER_RANK=="+quote(edt_Rank.Text);
 	}
 	
 	if (length(cb_Level.Value) != 0) {
@@ -108,7 +107,7 @@ function btn_search_OnClick(obj)
 	
 		pFilter += "USER_LEVEL=="+quote(cb_Level.Value);
 	}
-	
+	trace(pFilter);
 	ds_List.Filter(pFilter);
 }
 
@@ -166,14 +165,16 @@ function btn_save_OnClick(obj)
 		}
 	}
 	
+	edt_userNm.Text = "";
+	edt_Rank.Text = "";
+	cb_Level.index = 0;
+	
 	btn_search_OnClick();
 }
 
 //데이터 변경 이벤트
 function ds_List_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
 {
-	trace("obj " + obj + " nRow " + nRow + " strColumnID " + strColumnID + " varOldValue " + varOldValue + " varNewValue " + varNewValue + " nPivotIndex " + nPivotIndex);
-	
 	if (strColumnID != "FLAG" && length(ds_List.getColumn(nRow, "USER_ID")) != 0) {
 		ds_List.FireEvent = false;
 		ds_List.setColumn(nRow, "FLAG", "U");

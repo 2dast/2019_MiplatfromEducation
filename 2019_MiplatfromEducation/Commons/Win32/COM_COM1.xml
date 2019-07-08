@@ -92,7 +92,6 @@ function btn_search_OnClick(obj)
 	var pFilter = "";
 
 	if (length(edt_userNm.Value) != 0) {
-		if (length(pFilter) !=0) pFilter += " && ";
 		
 		pFilter += "USER_NM=="+quote(edt_userNm.Text);
 	}
@@ -100,7 +99,7 @@ function btn_search_OnClick(obj)
 	if (length(edt_Rank.Value) != 0) {
 		if (length(pFilter) !=0) pFilter += " && ";
 	
-		pFilter += "&&USER_RANK=="+quote(edt_Rank.Text);
+		pFilter += "USER_RANK=="+quote(edt_Rank.Text);
 	}
 	
 	if (length(cb_Level.Value) != 0) {
@@ -165,6 +164,10 @@ function btn_save_OnClick(obj)
 						
 		}
 	}
+	
+	edt_userNm.Text = "";
+	edt_Rank.Text = "";
+	cb_Level.index = 0;
 	
 	btn_search_OnClick();
 }
