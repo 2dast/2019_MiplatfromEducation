@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="600" Id="COM_MAIN" Left="8" PidAttrib="7" Title="MAIN" Top="8" Ver="1.0" Width="650" WorkArea="true">
+		<Div Height="600" Id="div_Main" TabOrder="1" Text="Div0" Width="650">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script></Script>
+</Window>

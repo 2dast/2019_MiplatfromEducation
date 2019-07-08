@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="MENU" Left="8" PidAttrib="7" Title="MENU" Top="8" Ver="1.0" Width="950" WorkArea="true">
+		<TreeView BindDataset="GDS_MENU" Border="Flat" Height="542" Id="tv_Menu" Left="-1" LevelColumn="MENU_LVL" OnDblClick="tv_Menu_OnDblClick" TabOrder="1" TEXTColumn="MENU_NM" Top="1" Width="149"></TreeView>
+		<Div Height="535" Id="div_Main" Left="151" TabOrder="2" Text="Div0" Top="1" Width="794">
+			<Contents></Contents>
+		</Div>
+	</Form>
+	<Script><![CDATA[
+function tv_Menu_OnDblClick(obj,nRow)
+{
+	if (GDS_MENU.getColumn(nRow, "MENU_ID") != null) {
+		div_Main.URL = GDS_MENU.getColumn(nRow, "MENU_ID");
+	}
+}
+]]></Script>
+</Window>

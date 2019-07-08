@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ConnectGroup BkColor="white" device="Win32&#32;(800x600)" Font="Default,0" height="600" Statusbar="true" Title="2019_MiplatfromEducation" titlebar="true" version="1.0" width="800" work_height="543" work_width="800">
+<ConnectGroup BkColor="white" device="Win32&#32;(800x600)" Font="Default,0" height="580" Statusbar="true" Title="2019_MiplatfromEducation" titlebar="true" version="1.0" width="950" work_height="543" work_width="800">
 	<container Version="1000">
 		<Component Height="21" Id="Spin" Image="10" Name="cySpin" Title="Spin" Version="1000" Width="121"/>
 		<Component Height="21" Id="MaskEdit" Image="19" Name="cyMaskedit" Title="MaskEdit" Version="1000" Width="121"/>
@@ -49,6 +49,9 @@
 			<Script Baseurl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Win32\" ScriptUrl="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Commons\Script\"/>
 		</AppGroup>
 	</AppGroups>
+	<DockBars>
+		<DockBar Align="top" Border="false" Bottom="800" ID="FRM_LEFT" InitURL="Commons::MENU.xml" Left="0" Right="800" Top="0" Visible="true"/>
+	</DockBars>
 	<Script></Script>
 	<Datasets>
 		<Dataset DataSetType="Dataset" Id="GDS_COMPANY">
@@ -212,7 +215,7 @@
 					<NEW_YN>N</NEW_YN>
 					<USER_HP>02-952-2313</USER_HP>
 					<USER_ID>1</USER_ID>
-					<USER_LEVEL>SALES,&#32;SERVICES,&#32;PARTS</USER_LEVEL>
+					<USER_LEVEL>SERVICES</USER_LEVEL>
 					<USER_LOGIN_ID>LOGIN1</USER_LOGIN_ID>
 					<USER_NM>000</USER_NM>
 					<USER_RANK>대리</USER_RANK>
@@ -238,23 +241,16 @@
 				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
 				<record>
 					<CODE>SALES</CODE>
-					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
-					<CODE_EX>무구분</CODE_EX>
-					<CODE_NM>판매</CODE_NM>
+					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
+					<CODE_EX>사업구분</CODE_EX>
+					<CODE_NM>판매처</CODE_NM>
 					<TAST_TYPE>GDS_001</TAST_TYPE>
 				</record>
 				<record>
 					<CODE>SERVICES</CODE>
-					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
-					<CODE_EX>업무구분</CODE_EX>
-					<CODE_NM>서비</CODE_NM>
-					<TAST_TYPE>GDS_001</TAST_TYPE>
-				</record>
-				<record>
-					<CODE>PARTS</CODE>
-					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
-					<CODE_EX>업무구분</CODE_EX>
-					<CODE_NM>부품</CODE_NM>
+					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
+					<CODE_EX>사업구분</CODE_EX>
+					<CODE_NM>서비스센터</CODE_NM>
 					<TAST_TYPE>GDS_001</TAST_TYPE>
 				</record>
 				<record>
@@ -273,45 +269,24 @@
 				</record>
 				<record>
 					<CODE>SALES</CODE>
-					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
-					<CODE_EX>사업구분</CODE_EX>
-					<CODE_NM>판매처</CODE_NM>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>판매팀</CODE_NM>
 					<TAST_TYPE>GDS_003</TAST_TYPE>
 				</record>
 				<record>
 					<CODE>SERVICES</CODE>
-					<CODE_ENG_EX>BIZ_TYPE</CODE_ENG_EX>
-					<CODE_EX>사업구분</CODE_EX>
-					<CODE_NM>서비스센터</CODE_NM>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>서비스팀</CODE_NM>
 					<TAST_TYPE>GDS_003</TAST_TYPE>
 				</record>
 				<record>
-					<CODE></CODE>
-					<CODE_ENG_EX></CODE_ENG_EX>
-					<CODE_EX></CODE_EX>
-					<CODE_NM></CODE_NM>
-					<TAST_TYPE></TAST_TYPE>
-				</record>
-				<record>
-					<CODE></CODE>
-					<CODE_ENG_EX></CODE_ENG_EX>
-					<CODE_EX></CODE_EX>
-					<CODE_NM></CODE_NM>
-					<TAST_TYPE></TAST_TYPE>
-				</record>
-				<record>
-					<CODE></CODE>
-					<CODE_ENG_EX></CODE_ENG_EX>
-					<CODE_EX></CODE_EX>
-					<CODE_NM></CODE_NM>
-					<TAST_TYPE></TAST_TYPE>
-				</record>
-				<record>
-					<CODE></CODE>
-					<CODE_ENG_EX></CODE_ENG_EX>
-					<CODE_EX></CODE_EX>
-					<CODE_NM></CODE_NM>
-					<TAST_TYPE></TAST_TYPE>
+					<CODE>PARTS</CODE>
+					<CODE_ENG_EX>USER_LEVEL</CODE_ENG_EX>
+					<CODE_EX>업무구분</CODE_EX>
+					<CODE_NM>부품팀</CODE_NM>
+					<TAST_TYPE>GDS_003</TAST_TYPE>
 				</record>
 			</Contents>
 		</Dataset>
@@ -320,12 +295,115 @@
 				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
 				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
 				<record>
+					<CODE></CODE>
+					<CODE_NM>ALL</CODE_NM>
+				</record>
+				<record>
 					<CODE>SALES</CODE>
 					<CODE_NM>판매처</CODE_NM>
 				</record>
 				<record>
 					<CODE>SERVICES</CODE>
 					<CODE_NM>서비스센터</CODE_NM>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_MENU">
+			<Contents>
+				<colinfo id="MENU_LVL" size="256" summ="default" type="STRING"/>
+				<colinfo id="MENU_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="MENU_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<MENU_ID>Commons::COM_COM1</MENU_ID>
+					<MENU_LVL>1</MENU_LVL>
+					<MENU_NM>공통화면1</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID>Commons::COM_COM2</MENU_ID>
+					<MENU_LVL>1</MENU_LVL>
+					<MENU_NM>공통화면2</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>1</MENU_LVL>
+					<MENU_NM>Sales</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID>Sales::CUSTOMER</MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM>고객등록</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>1</MENU_LVL>
+					<MENU_NM>Services</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID>Services::COMPANY</MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM>사업소&#32;관리</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>1</MENU_LVL>
+					<MENU_NM>Parts</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID>Parts::PRODUCT</MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM>제품&#32;관리</MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+				<record>
+					<MENU_ID></MENU_ID>
+					<MENU_LVL>2</MENU_LVL>
+					<MENU_NM></MENU_NM>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_003">
+			<Contents>
+				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<CODE></CODE>
+					<CODE_NM>ALL</CODE_NM>
+				</record>
+				<record>
+					<CODE>SALES</CODE>
+					<CODE_NM>판매팀</CODE_NM>
+				</record>
+				<record>
+					<CODE>SERVICES</CODE>
+					<CODE_NM>서비스팀</CODE_NM>
+				</record>
+				<record>
+					<CODE>Parts</CODE>
+					<CODE_NM>부품팀</CODE_NM>
 				</record>
 			</Contents>
 		</Dataset>

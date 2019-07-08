@@ -1,50 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window>
-	<Form Height="543" Id="COM_COM1" Left="8" PidAttrib="7" Title="공통화면1" Top="8" Ver="1.0" Width="800" WorkArea="true">
-		<Grid AutoFit="TRUE" BindDataset="GDS_COMPANY" BkColor2="default" BoldHead="true" Bottom="363" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="grd_List_OnCellClick" Right="792" TabOrder="1" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+	<Form Height="543" Id="COM_COM1" Left="8" OnLoadCompleted="COM_COM1_OnLoadCompleted" PidAttrib="7" Title="공통화면1" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_List" OnColumnChanged="ds_List_OnColumnChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Level">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEVEL" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Grid AutoFit="TRUE" BindDataset="ds_List" BkColor2="default" BoldHead="true" Bottom="363" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="grd_List_OnCellClick" Right="792" TabOrder="1" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
 			<contents>
 				<format id="Default">
 					<columns>
+						<col width="20"/>
 						<col width="80"/>
 						<col width="80"/>
 						<col width="80"/>
-						<col width="236"/>
+						<col width="80"/>
 						<col width="80"/>
 					</columns>
 					<head>
-						<cell col="0" display="text" text="법인명"/>
-						<cell col="1" display="text" text="CEO"/>
-						<cell col="2" display="text" text="전화번호"/>
-						<cell col="3" display="text" text="주소"/>
-						<cell col="4" display="text" text="사업소구분"/>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" text="아이디"/>
+						<cell col="2" display="text" text="사용자명"/>
+						<cell col="3" display="text" text="직급"/>
+						<cell col="4" display="text" text="전화번호"/>
+						<cell col="5" display="text" text="업무구분"/>
 					</head>
 					<body>
-						<cell align="center" col="0" colid="BIZ_NM" display="text"/>
-						<cell align="center" col="1" colid="BIZ_CEO_NM" display="text"/>
-						<cell align="center" col="2" colid="BIZ_CALL_NO" display="text"/>
-						<cell align="left" col="3" colid="BIZ_ADDR" display="text"/>
-						<cell align="center" col="4" colid="BIZ_TYPE" combocol="CODE" combodataset="GDS_001" combotext="CODE_NM" display="combo" edit="combo"/>
+						<cell col="0" colid="FLAG" display="text"/>
+						<cell align="center" col="1" colid="USER_LOGIN_ID" display="text"/>
+						<cell align="center" col="2" colid="USER_NM" display="text"/>
+						<cell align="center" col="3" colid="USER_RANK" display="text"/>
+						<cell align="center" col="4" colid="USER_HP" display="text"/>
+						<cell align="center" col="5" colid="USER_LEVEL" combocol="CODE" combodataset="GDS_003" combotext="CODE_NM" display="combo"/>
 					</body>
 				</format>
 			</contents>
 		</Grid>
 		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="2" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="5" Width="782"></Static>
-		<Edit Height="21" Id="edt_" Left="88" TabOrder="3" Text="조회조건&#32;1" Top="16" Width="121"></Edit>
-		<Static Height="13" Id="st_" Left="31" TabOrder="4" Text="조회조건&#32;1" Top="19" Width="49"></Static>
-		<Static Height="13" Id="Static0" Left="31" TabOrder="6" Text="조회조건&#32;3" Top="51" Width="49"></Static>
-		<Edit Height="21" Id="Edit0" Left="88" TabOrder="5" Text="조회조건&#32;3" Top="48" Width="121"></Edit>
-		<Static Height="13" Id="Static1" Left="231" TabOrder="8" Text="조회조건&#32;2" Top="19" Width="49"></Static>
-		<Edit Height="21" Id="Edit1" Left="288" TabOrder="7" Text="조회조건&#32;2" Top="16" Width="121"></Edit>
-		<Button Height="21" Id="btn" Left="527" TabOrder="9" Text="버튼&#32;1" Top="16" Width="80"></Button>
-		<Button Height="21" Id="Button1" Left="615" TabOrder="10" Text="버튼&#32;2" Top="16" Width="80"></Button>
-		<Button Height="21" Id="Button2" Left="704" TabOrder="11" Text="버튼&#32;3" Top="16" Width="80"></Button>
-		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="10" TabOrder="12" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="370" Width="780"></Static>
+		<Edit Height="21" Id="edt_userNm" Left="88" TabOrder="3" Top="16" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="st_" Left="31" TabOrder="4" Text="사용자명" Top="19" Width="49"></Static>
+		<Static Align="Right" Height="13" Id="Static0" Left="31" TabOrder="6" Text="직급" Top="51" Width="49"></Static>
+		<Edit Height="21" Id="edt_Rank" ImeMode="none" Left="88" TabOrder="5" Top="48" Width="121"></Edit>
+		<Static Height="13" Id="Static1" Left="239" TabOrder="7" Text="업무구분" Top="19" Width="49"></Static>
+		<Button Height="21" Id="btn_search" Left="615" OnClick="btn_search_OnClick" TabOrder="8" Text="조&#32;회" Top="16" Width="80"></Button>
+		<Button Height="21" Id="btn_save" Left="703" OnClick="btn_save_OnClick" TabOrder="9" Text="저&#32;장" Top="16" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="10" TabOrder="10" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="370" Width="780"></Static>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="21" Id="cb_Level" INDEX="0" InnerDataset="GDS_003" Left="289" TabOrder="11" Top="14" Width="105"></Combo>
+		<Button Height="21" Id="btn_Add" Left="615" OnClick="btn_Add_OnClick" TabOrder="12" Text="추&#32;가" Top="376" Width="80"></Button>
+		<Static Align="Right" Height="13" Id="Static3" Left="23" TabOrder="14" Text="아이디" Top="387" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="USER_LOGIN_ID" Height="21" Id="edt_I_userId" Left="80" TabOrder="13" Top="384" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static4" Left="23" TabOrder="16" Text="직급" Top="451" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="USER_RANK" Height="21" Id="edt_I_Rank" ImeMode="none" Left="80" TabOrder="15" Top="448" Width="121"></Edit>
+		<Combo BindDataset="ds_List" CodeColumn="CODE" Column="USER_LEVEL" DataColumn="CODE_NM" Height="21" Id="cb_I_Level" INDEX="0" InnerDataset="ds_Level" Left="281" TabOrder="17" Top="382" Width="105"></Combo>
+		<Static Height="13" Id="Static5" Left="231" TabOrder="18" Text="업무구분" Top="387" Width="49"></Static>
+		<Static Align="Right" Height="13" Id="Static6" Left="23" TabOrder="20" Text="전화번호" Top="483" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="USER_HP" Height="21" Id="edt_I_userHp" ImeMode="none" Left="80" TabOrder="19" Top="480" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static7" Left="23" TabOrder="22" Text="사용자명" Top="419" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="USER_NM" Height="21" Id="edt_I_userNm" Left="80" TabOrder="21" Top="416" Width="121"></Edit>
+		<Button Height="21" Id="btn_Del" Left="703" OnClick="btn_Del_OnClick" TabOrder="23" Text="삭&#32;제" Top="376" Width="80"></Button>
+		<Edit BindDataset="ds_List" Column="BIZ_ID" Height="21" Id="edt_I_bizId" ImeMode="none" Left="280" TabOrder="24" Top="448" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static8" Left="223" TabOrder="25" Text="사업소번호" Top="451" Width="49"></Static>
 	</Form>
 	<Script><![CDATA[
-function grd_List_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+//화면 오픈 이벤트
+function COM_COM1_OnLoadCompleted(obj)
 {
-	trace(GDS_COMPANY.getColumn(nRow, "BIZ_CEO_NM"));
+	ds_List.Copy("GDS_USERS");
+	ds_Level.Copy("GDS_003");
+	
+	ds_List.AddColumn("FLAG");
+	
+	ds_Level.Filter("CODE!=''");
 }
 
+//그리드 클릭 이벤트
+function grd_List_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	
+}
+
+//조회버튼 클릭 이벤트
+function btn_search_OnClick(obj)
+{
+	ds_List.Copy("GDS_USERS");
+	ds_List.AddColumn("FLAG");
+	
+	var pFilter = "";
+
+	if (length(edt_userNm.Value) != 0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "USER_NM=="+quote(edt_userNm.Text);
+	}
+	
+	if (length(edt_Rank.Value) != 0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+	
+		pFilter += "&&USER_RANK=="+quote(edt_Rank.Text);
+	}
+	
+	if (length(cb_Level.Value) != 0) {
+		if (length(pFilter) !=0) pFilter += " && ";		
+	
+		pFilter += "USER_LEVEL=="+quote(cb_Level.Value);
+	}
+	
+	ds_List.Filter(pFilter);
+}
+
+//추가 버튼 클릭 이벤트
+function btn_Add_OnClick(obj)
+{
+	ds_List.AddRow();
+	ds_List.setColumn(ds_List.GetLastRow(), "FLAG", "I");
+	edt_I_userId.value = "";
+	edt_I_userNm.value = "";
+	edt_I_Rank.value = "";
+	edt_I_userHp.value = "";
+	cb_I_Level.index = 0;
+	
+}
+
+//삭제 이벤트
+function btn_Del_OnClick(obj)
+{
+	if ( ds_List.getColumn(grd_List.CurrentRow, "FLAG") == "I") {
+		ds_List.DeleteRow(grd_List.CurrentRow);
+		
+		return;
+	}
+
+	ds_List.setColumn(grd_List.CurrentRow, "FLAG", "D");
+}
+
+//저장 이벤트
+function btn_save_OnClick(obj)
+{
+	for (var i=0; i<ds_List.GetRowCount(); i++) {
+		if (ds_List.getColumn(i, "FLAG") == "I") {
+			GDS_USERS.AddRow();
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_ID", GDS_USERS.GetLastRow());
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_LOGIN_ID", ds_List.getColumn(i, "USER_LOGIN_ID"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_NM", ds_List.getColumn(i, "USER_NM"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "BIZ_ID", ds_List.getColumn(i, "BIZ_ID"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_HP", ds_List.getColumn(i, "USER_HP"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_RANK", ds_List.getColumn(i, "USER_RANK"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "USER_LEVEL", ds_List.getColumn(i, "USER_LEVEL"));
+			GDS_USERS.setColumn(GDS_USERS.GetLastRow(), "NEW_YN", "Y");
+			
+		} else if (ds_List.getColumn(i, "FLAG") == "U") {
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "USER_LOGIN_ID", ds_List.getColumn(i, "USER_LOGIN_ID"));
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "USER_NM", ds_List.getColumn(i, "USER_NM"));
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "BIZ_ID", ds_List.getColumn(i, "BIZ_ID"));
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "USER_HP", ds_List.getColumn(i, "USER_HP"));
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "USER_RANK", ds_List.getColumn(i, "USER_RANK"));
+			GDS_USERS.setColumn(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")), "USER_LEVEL", ds_List.getColumn(i, "USER_LEVEL"));
+			
+		} else if (ds_List.getColumn(i, "FLAG") == "D") {			
+			GDS_USERS.DeleteRow(GDS_USERS.FindRow("USER_ID", ds_List.getColumn(i, "USER_ID")));
+						
+		}
+	}
+	
+	btn_search_OnClick();
+}
+
+//데이터 변경 이벤트
+function ds_List_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	trace("obj " + obj + " nRow " + nRow + " strColumnID " + strColumnID + " varOldValue " + varOldValue + " varNewValue " + varNewValue + " nPivotIndex " + nPivotIndex);
+	
+	if (strColumnID != "FLAG" && length(ds_List.getColumn(nRow, "USER_ID")) != 0) {
+		ds_List.FireEvent = false;
+		ds_List.setColumn(nRow, "FLAG", "U");
+		ds_List.FireEvent = true;
+	}
+}
 ]]></Script>
 </Window>
