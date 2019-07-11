@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Static Align="Center" BKColor="whitesmoke" Font="맑은&#32;고딕,14,Bold" Height="521" Id="Static2" TabOrder="3" Width="780"></Static>
+		<Static Font="Tahoma,24,Bold" Height="46" Id="Static5" Left="27" TabOrder="8" Text="신규&#32;고객&#32;등록" Top="10" Width="165"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="static7" Left="382" TabOrder="2" Text="법인명" Top="92" Width="49"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static3" Left="382" TabOrder="4" Text="고객&#32;성명" Top="162" Width="56"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static6" Left="382" TabOrder="10" Text="주소지" Top="232" Width="40"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static4" Left="382" TabOrder="6" Text="전화번호" Top="302" Width="56"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static9" Left="382" TabOrder="16" Text="휴대폰&#32;번호" Top="372" Width="74"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static1" Left="382" TabOrder="7" Text="서비스&#32;구분" Top="442" Width="72"></Static>
+		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Font="맑은&#32;고딕,10" Height="34" Id="cus_company" InnerDataset="GDS_COMPANY" Left="472" TabOrder="1" Top="92" Width="240"></Combo>
+		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_name" Left="472" TabOrder="5" ToolTipText="고객&#32;성함" Top="162" Width="240"></Edit>
+		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_addr" Left="472" TabOrder="11" ToolTipText="고객&#32;주소지" Top="232" Width="240"></Edit>
+		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_originalNO" Left="472" TabOrder="12" ToolTipText="고객&#32;전화번호" Top="302" Width="240"></Edit>
+		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_hopeNO" Left="472" TabOrder="14" ToolTipText="고객&#32;휴대폰&#32;전화번호" Top="372" Width="240"></Edit>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Font="맑은&#32;고딕,10" Height="34" Id="cus_div" INDEX="0" InnerDataset="GDS_001" Left="472" TabOrder="15" Top="442" Width="240"></Combo>
+		<Button BKColor="cornsilk" Font="Tahoma,11,Bold" Height="29" Id="Btn_register" Left="704" OnClick="Btn_register_OnClick" TabOrder="9" Text="등록" Top="488" Width="64"></Button>
+		<Shape Bottom="72" Height="16" Id="Shape0" Left="8" Right="776" TabOrder="13" Top="56" Width="768"></Shape>
+		<Grid AutoFit="TRUE" BindDataset="GDS_CUSTOMER" BkColor2="default" BoldHead="true" Bottom="496" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="416" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="360" TabOrder="17" TabStop="true" Top="80" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="344">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="법인명"/>
+						<cell col="1" display="text" text="고객명"/>
+						<cell col="2" display="text" text="서비스"/>
+						<cell col="3" display="text" text="휴대폰번호"/>
+					</head>
+					<body>
+						<cell col="0" colid="BIZ_ID" combocol="BIZ_ID" combodataset="GDS_COMPANY" combotext="BIZ_NM" display="combo"/>
+						<cell col="1" colid="CU_NM" display="text"/>
+						<cell col="2" colid="CU_TYPE" combocol="CODE" combodataset="GDS_003" combotext="CODE_NM" display="combo"/>
+						<cell col="3" colid="CU_HP_NO" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+	</Form>
+	<Script><![CDATA[
+function Btn_register_OnClick(obj)
+{
+	
+	//  데이터셋 마지막 줄 CU_ID라는 컬럼의 값을 받아서 strCUID_LASTINDEX에 넣음
+	var strCUID_LASTINDEX = GDS_CUSTOMER.GetColumn(GDS_CUSTOMER.lastrow, "CU_ID");
+	// strCIID_LASTINDEX를 숫자로 쓸 수 있게 바꿈 => toNumber()
+	var intCUID_LASTINDEX = toNumber(strCUID_LASTINDEX);
+	// intCUID에 +1씩 자동으로 증가하게 함
+	var plusCUID_LASTINDEX = intCUID_LASTINDEX+1;
+	//alert(plusCUID_LASTINDEX);
+	
+
+	GDS_CUSTOMER.AddRow();
+		
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "BIZ_ID", cus_company.Value);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_ID", plusCUID_LASTINDEX);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_NM", cus_name.Text);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_ADDR", cus_addr.Text);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_CALL_NO", cus_originalNO.Text);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_HP_NO", cus_hopeNO.Text);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "CU_TYPE", cus_div.Value);
+	GDS_CUSTOMER.SetColumn(GDS_CUSTOMER.row, "NEW_YN", "Y");
+	
+	go("Sales::cust_regis.xml");
+	
+}
+]]></Script>
+</Window>

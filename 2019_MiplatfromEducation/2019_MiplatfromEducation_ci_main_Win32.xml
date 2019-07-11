@@ -117,6 +117,15 @@
 					<BIZ_TYPE>SALES</BIZ_TYPE>
 					<NEW_YN>N</NEW_YN>
 				</record>
+				<record>
+					<BIZ_ADDR>서울시&#32;서초구</BIZ_ADDR>
+					<BIZ_CALL_NO>02-301-4027</BIZ_CALL_NO>
+					<BIZ_CEO_NM>우유부단</BIZ_CEO_NM>
+					<BIZ_ID>291-30-49208</BIZ_ID>
+					<BIZ_NM>한일통신</BIZ_NM>
+					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<NEW_YN>Y</NEW_YN>
+				</record>
 			</Contents>
 		</Dataset>
 		<Dataset DataSetType="Dataset" Id="GDS_CUSTOMER">
@@ -169,6 +178,16 @@
 					<CU_TYPE>SALES</CU_TYPE>
 					<NEW_YN>N</NEW_YN>
 				</record>
+				<record>
+					<BIZ_ID>291-30-49208</BIZ_ID>
+					<CU_ADDR>서울시&#32;관악구</CU_ADDR>
+					<CU_CALL_NO>02-949-3920</CU_CALL_NO>
+					<CU_HP_NO>010-2838-8499</CU_HP_NO>
+					<CU_ID>5</CU_ID>
+					<CU_NM>삼삼해</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>Y</NEW_YN>
+				</record>
 			</Contents>
 		</Dataset>
 		<Dataset DataSetType="Dataset" Id="GDS_PRODUCT">
@@ -197,6 +216,33 @@
 					<PD_RETAIL_PRICE>990000</PD_RETAIL_PRICE>
 					<PD_STOCK>10</PD_STOCK>
 					<PD_WHOLESALES_PRICE>750000</PD_WHOLESALES_PRICE>
+				</record>
+				<record>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-003</PD_ID>
+					<PD_IMG>SE-003</PD_IMG>
+					<PD_NM>갤럭시노트10</PD_NM>
+					<PD_RETAIL_PRICE>1100000</PD_RETAIL_PRICE>
+					<PD_STOCK>10</PD_STOCK>
+					<PD_WHOLESALES_PRICE>950000</PD_WHOLESALES_PRICE>
+				</record>
+				<record>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-004</PD_ID>
+					<PD_IMG>SE-004</PD_IMG>
+					<PD_NM>아이폰6</PD_NM>
+					<PD_RETAIL_PRICE>990000</PD_RETAIL_PRICE>
+					<PD_STOCK>10</PD_STOCK>
+					<PD_WHOLESALES_PRICE>620000</PD_WHOLESALES_PRICE>
+				</record>
+				<record>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-005</PD_ID>
+					<PD_IMG>SE-005</PD_IMG>
+					<PD_NM>아이폰XS</PD_NM>
+					<PD_RETAIL_PRICE>1500000</PD_RETAIL_PRICE>
+					<PD_STOCK>10</PD_STOCK>
+					<PD_WHOLESALES_PRICE>1000000</PD_WHOLESALES_PRICE>
 				</record>
 			</Contents>
 		</Dataset>
@@ -329,19 +375,19 @@
 					<MENU_NM>Sales</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID>Sales::CUSTOMER</MENU_ID>
+					<MENU_ID>Sales::cust_regis</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
-					<MENU_NM>고객등록</MENU_NM>
+					<MENU_NM>고객&#32;등록</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID></MENU_ID>
+					<MENU_ID>Sales::cont_regis</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
-					<MENU_NM></MENU_NM>
+					<MENU_NM>계약&#32;등록</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID></MENU_ID>
+					<MENU_ID>Sales::cont_list</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
-					<MENU_NM></MENU_NM>
+					<MENU_NM>계약&#32;리스트</MENU_NM>
 				</record>
 				<record>
 					<MENU_ID></MENU_ID>
@@ -404,6 +450,120 @@
 				<record>
 					<CODE>Parts</CODE>
 					<CODE_NM>부품팀</CODE_NM>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_CONTRACT_CLASS">
+			<Contents>
+				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<CODE></CODE>
+					<CODE_NM>ALL</CODE_NM>
+				</record>
+				<record>
+					<CODE>SALE</CODE>
+					<CODE_NM>판매</CODE_NM>
+				</record>
+				<record>
+					<CODE>CONTRACT</CODE>
+					<CODE_NM>계약</CODE_NM>
+				</record>
+				<record>
+					<CODE>CANCEL</CODE>
+					<CODE_NM>계약&#32;취소</CODE_NM>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_CONTRACT">
+			<Contents>
+				<colinfo id="BIZ_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="BIZ_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_TYPE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_CALL_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_HP_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="CU_ADDR" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="PD_NM" size="256" summ="default" type="STRING"/>
+				<colinfo id="CT_COST" size="256" summ="default" type="STRING"/>
+				<colinfo id="CT_HOPE_NO" size="256" summ="default" type="STRING"/>
+				<colinfo id="CT_DATE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CT_STATE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CT_ID" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<record>
+					<BIZ_ID>110-50-30581</BIZ_ID>
+					<BIZ_NM>천하장사만만세</BIZ_NM>
+					<CT_COST>599000</CT_COST>
+					<CT_DATE>2017-12-09</CT_DATE>
+					<CT_HOPE_NO>010-8240-0998</CT_HOPE_NO>
+					<CT_ID>contract_1</CT_ID>
+					<CT_STATE>CANCEL</CT_STATE>
+					<CU_ADDR>서울시&#32;광진구</CU_ADDR>
+					<CU_CALL_NO>02-494-1099</CU_CALL_NO>
+					<CU_HP_NO>010-0827-5589</CU_HP_NO>
+					<CU_ID>1</CU_ID>
+					<CU_NM>3</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-001</PD_ID>
+					<PD_NM>SE-1</PD_NM>
+				</record>
+				<record>
+					<BIZ_ID>291-30-49208</BIZ_ID>
+					<BIZ_NM>한일통신</BIZ_NM>
+					<CT_COST>1500000</CT_COST>
+					<CT_DATE>2019-01-29</CT_DATE>
+					<CT_HOPE_NO>010-2381-9184</CT_HOPE_NO>
+					<CT_ID>contract_2</CT_ID>
+					<CT_STATE>CONTRACT</CT_STATE>
+					<CU_ADDR>서울시&#32;관악구</CU_ADDR>
+					<CU_CALL_NO>02-949-3920</CU_CALL_NO>
+					<CU_HP_NO>010-2838-8499</CU_HP_NO>
+					<CU_ID>5</CU_ID>
+					<CU_NM>삼삼해</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-005</PD_ID>
+					<PD_NM>아이폰XS</PD_NM>
+				</record>
+				<record>
+					<BIZ_ID>423-16-24232</BIZ_ID>
+					<BIZ_NM>신화통신</BIZ_NM>
+					<CT_COST>990000</CT_COST>
+					<CT_DATE>2017-06-15</CT_DATE>
+					<CT_HOPE_NO>010-1563-8288</CT_HOPE_NO>
+					<CT_ID>contract_3</CT_ID>
+					<CT_STATE>SALE</CT_STATE>
+					<CU_ADDR></CU_ADDR>
+					<CU_CALL_NO>02-064-4443</CU_CALL_NO>
+					<CU_HP_NO>010-0423-4443</CU_HP_NO>
+					<CU_ID>4</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-004</PD_ID>
+					<PD_NM>아이폰7</PD_NM>
+				</record>
+				<record>
+					<BIZ_ID>234-12-12121</BIZ_ID>
+					<BIZ_NM>광진통신</BIZ_NM>
+					<CT_COST>1050000</CT_COST>
+					<CT_DATE>2019-04-02</CT_DATE>
+					<CT_HOPE_NO>010-2900-1048</CT_HOPE_NO>
+					<CT_ID>contract_4</CT_ID>
+					<CT_STATE>SALE</CT_STATE>
+					<CU_ADDR></CU_ADDR>
+					<CU_CALL_NO>02-766-4494</CU_CALL_NO>
+					<CU_HP_NO>010-4230-1611</CU_HP_NO>
+					<CU_ID>3</CU_ID>
+					<CU_NM>000</CU_NM>
+					<CU_TYPE>SALES</CU_TYPE>
+					<NEW_YN>Y</NEW_YN>
+					<PD_ID>SE-003</PD_ID>
+					<PD_NM>갤럭시노트10</PD_NM>
 				</record>
 			</Contents>
 		</Dataset>
