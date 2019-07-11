@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window>
-	<Form Height="543" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+	<Form Height="543" Id="form" Left="8" OnLoadCompleted="custregis_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="COPY_001">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
 		<Static Align="Center" BKColor="whitesmoke" Font="맑은&#32;고딕,14,Bold" Height="521" Id="Static2" TabOrder="3" Width="780"></Static>
 		<Static Font="Tahoma,24,Bold" Height="46" Id="Static5" Left="27" TabOrder="8" Text="신규&#32;고객&#32;등록" Top="10" Width="165"></Static>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="static7" Left="382" TabOrder="2" Text="법인명" Top="92" Width="49"></Static>
@@ -14,7 +22,7 @@
 		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_addr" Left="472" TabOrder="11" ToolTipText="고객&#32;주소지" Top="232" Width="240"></Edit>
 		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_originalNO" Left="472" TabOrder="12" ToolTipText="고객&#32;전화번호" Top="302" Width="240"></Edit>
 		<Edit Font="맑은&#32;고딕,10" Height="34" Id="cus_hopeNO" Left="472" TabOrder="14" ToolTipText="고객&#32;휴대폰&#32;전화번호" Top="372" Width="240"></Edit>
-		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Font="맑은&#32;고딕,10" Height="34" Id="cus_div" INDEX="0" InnerDataset="GDS_001" Left="472" TabOrder="15" Top="442" Width="240"></Combo>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Font="맑은&#32;고딕,10" Height="34" Id="cus_div" INDEX="0" InnerDataset="COPY_001" Left="472" TabOrder="15" Top="442" Width="240"></Combo>
 		<Button BKColor="cornsilk" Font="Tahoma,11,Bold" Height="29" Id="Btn_register" Left="704" OnClick="Btn_register_OnClick" TabOrder="9" Text="등록" Top="488" Width="64"></Button>
 		<Shape Bottom="72" Height="16" Id="Shape0" Left="8" Right="776" TabOrder="13" Top="56" Width="768"></Shape>
 		<Grid AutoFit="TRUE" BindDataset="GDS_CUSTOMER" BkColor2="default" BoldHead="true" Bottom="496" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="416" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="360" TabOrder="17" TabStop="true" Top="80" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="344">
@@ -42,7 +50,13 @@
 			</contents>
 		</Grid>
 	</Form>
-	<Script><![CDATA[
+	<Script><![CDATA[function custregis_OnLoadCompleted(obj)
+{
+	COPY_001.Copy("GDS_001");	
+	COPY_001.Filter("CODE!=''");
+}
+
+
 function Btn_register_OnClick(obj)
 {
 	
