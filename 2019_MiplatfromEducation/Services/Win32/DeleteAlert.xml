@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="264" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="624" WorkArea="true">
+		<Static Align="Center" Font="Tahoma,24" Height="113" Id="Static0" Left="40" TabOrder="1" Text="서비스&#32;예약을&#32;취소하시겠습니까?" Top="40" Width="546"></Static>
+		<Button Height="69" Id="Button0" Left="96" OnClick="btn_Delete" TabOrder="2" Text="네" Top="128" Width="200"></Button>
+		<Button Height="69" Id="Button1" Left="312" OnClick="Button1_OnClick" TabOrder="3" Text="아니오" Top="128" Width="200"></Button>
+	</Form>
+	<Script><![CDATA[
+function btn_Delete(obj)
+{
+	GDS_Services.DeleteRow(GDS_Services.currow);
+
+	close();
+}
+
+
+function Button1_OnClick(obj)
+{
+	close();
+}
+]]></Script>
+</Window>

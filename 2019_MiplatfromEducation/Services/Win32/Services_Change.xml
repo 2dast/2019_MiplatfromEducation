@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="544" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="912" WorkArea="true">
+		<Edit AutoSelect="TRUE" BindDataset="GDS_Services" Column="p_name" Font="Tahoma,12" Height="48" Id="edit_p_name" Left="40" TabOrder="1" Top="32" Width="128"></Edit>
+		<Static Height="30" Id="Static0" Left="48" TabOrder="2" Text="제품명" Top="16" Width="260"></Static>
+		<Static Height="30" Id="Static1" Left="40" TabOrder="3" Text="고객센터&#32;위치" Top="88" Width="260"></Static>
+		<Static Height="30" Id="Static2" Left="200" TabOrder="4" Text="연락처" Top="160" Width="212"></Static>
+		<Button Font="Tahoma,12" Height="51" Id="btn_service" Left="72" OnClick="btn_service_OnClick" TabOrder="5" Text="서비스&#32;예약&#32;수정" Top="376" Width="232"></Button>
+		<Edit BindDataset="GDS_Services" Column="number" Enable="FALSE" Font="Tahoma,12" Height="48" Id="edit_number" Left="200" Readonly="TRUE" TabOrder="6" Top="176" Width="128"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="GDS_Services" Column="addr" Font="Tahoma,12" Height="48" Id="edit_addr" Left="40" TabOrder="7" Top="104" Width="128"></Edit>
+		<Edit AutoSelect="TRUE" BindDataset="GDS_Services" Column="p_trouble" Font="Tahoma,12" Height="104" Id="edit_trouble" Left="40" TabOrder="8" Top="248" Width="296"></Edit>
+		<Edit BindDataset="GDS_Services" Column="name" Enable="FALSE" Font="Tahoma,12" Height="48" Id="edit_name" Left="40" TabOrder="9" Top="176" Width="128"></Edit>
+		<Static Height="30" Id="Static3" Left="200" TabOrder="10" Text="접수일" Top="16" Width="260"></Static>
+		<Static Height="30" Id="Static4" Left="40" TabOrder="11" Text="고객명" Top="160" Width="260"></Static>
+		<Static Height="30" Id="Static5" Left="40" TabOrder="12" Text="고장증세" Top="232" Width="260"></Static>
+		<Combo BindDataset="GDS_Services" CodeColumn="CODE_NM" Column="Diff" DataColumn="CODE" Font="Tahoma,12" Height="48" Id="com_services" ImeMode="none" InnerDataset="GDS_Services_Combo" Left="200" TabOrder="13" Top="104" Width="128"></Combo>
+		<Static Height="24" Id="Static6" Left="200" TabOrder="14" Text="구분" Top="88" Width="96"></Static>
+		<Calendar Enable="FALSE" Height="48" Id="Calendar0" Left="200" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="15" Top="32" Value="TODAY" Width="128"></Calendar>
+	</Form>
+	<Script><![CDATA[
+function btn_service_OnClick(obj)
+{
+	var strpid_lastindex = GDS_Services.GetColumn(GDS_Services.lastrow,"P_ID");
+	var intpid_lastindex = toNumber(strpid_lastindex);
+	var pluspid_lastindex = intpid_lastindex+1;
+	
+	GDS_Services.Row();
+	
+	
+	//GDS_Services.SetColumn(GDS_Services.row,"p_id",pluspid_lastindex);
+	GDS_Services.Setcolumn(GDS_Services.Row,"p_name",edit_p_name.Text);
+	GDS_Services.SetColumn(GDS_Services.Row,"p_trouble",edit_trouble.Text);
+	GDS_Services.SetColumn(GDS_Services.Row,"addr",edit_addr.Text);
+	//GDS_Services.SetColumn(GDS_Services.row,"day",Calendar0.Text);
+	GDS_Services.SetColumn(GDS_Services.Row,"name",edit_name.Text);
+	GDS_Services.SetColumn(GDS_Services.Row,"number",edit_number.Text);
+	GDS_Services.SetColumn(GDS_Services.Row,"NEW_YN","Y");
+	GDS_Services.Setcolumn(GDS_Services.Row,"Diff",com_services.Value);
+	
+	go("Services::Lookup");
+}
+]]></Script>
+</Window>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="536" Id="form" Left="8" OnLoadCompleted="Add_OnLoadComplated" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="928" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="Services_List" OnColumnChanged="ds_List_OnColumnChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="Services_Level">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<colinfo id="LEVEL" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Edit Font="Tahoma,12" Height="48" Id="edit_p_name" Left="928" TabOrder="1" Top="32" Width="128"></Edit>
+		<Static Height="30" Id="Static0" Left="944" TabOrder="2" Text="제품명" Top="8" Width="260"></Static>
+		<Static Height="30" Id="Static1" Left="936" TabOrder="3" Text="고객센터&#32;위치" Top="88" Width="260"></Static>
+		<Static Height="30" Id="Static2" Left="1104" TabOrder="4" Text="연락처" Top="168" Width="212"></Static>
+		<Button Font="Tahoma,12" Height="51" Id="btn_service" Left="960" OnClick="btn_service_OnClick" TabOrder="5" Text="서비스&#32;예약" Top="392" Width="232"></Button>
+		<Edit Font="Tahoma,12" Height="48" Id="edit_number" Left="1104" TabOrder="6" Top="200" Width="128"></Edit>
+		<Edit Font="Tahoma,12" Height="48" Id="edit_addr" Left="936" TabOrder="7" Top="112" Width="128"></Edit>
+		<Edit Font="Tahoma,12" Height="104" Id="edit_trouble" Left="952" TabOrder="8" Top="280" Width="296"></Edit>
+		<Edit Font="Tahoma,12" Height="48" Id="edit_name" Left="936" TabOrder="9" Top="192" Width="128"></Edit>
+		<Static Height="30" Id="Static3" Left="1072" TabOrder="10" Text="접수일" Top="8" Width="260"></Static>
+		<Static Height="30" Id="Static4" Left="944" TabOrder="11" Text="고객명" Top="168" Width="260"></Static>
+		<Static Height="30" Id="Static5" Left="944" TabOrder="12" Text="고장증세" Top="248" Width="260"></Static>
+		<Combo CodeColumn="CODE_NM" DataColumn="CODE" Font="Tahoma,12" Height="48" Id="com_services" ImeMode="none" InnerDataset="GDS_Services_Combo" Left="1096" TabOrder="13" Top="120" Width="128"></Combo>
+		<Static Height="24" Id="Static6" Left="1096" TabOrder="14" Text="구분" Top="96" Width="96"></Static>
+		<Calendar Height="48" Id="Calendar0" Left="1080" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="15" Top="40" Value="TODAY" Width="128"></Calendar>
+		<Grid AutoFit="TRUE" BindDataset="GDS_CUSTOMER" BkColor2="default" BoldHead="true" Bottom="379" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" Right="792" TabOrder="16" TabStop="true" Top="112" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="BIZ_ID"/>
+					<cell col="1" display="text" text="CU_ID"/>
+					<cell col="2" display="text" text="CU_NM"/>
+					<cell col="3" display="text" text="CU_TYPE"/>
+					<cell col="4" display="text" text="CU_CALL_NO"/>
+					<cell col="5" display="text" text="CU_HP_NO"/>
+					<cell col="6" display="text" text="CU_ADDR"/>
+					<cell col="7" display="text" text="NEW_YN"/>
+				</head>
+				<body>
+					<cell col="0" colid="BIZ_ID" display="text"/>
+					<cell col="1" colid="CU_ID" display="text"/>
+					<cell col="2" colid="CU_NM" display="text"/>
+					<cell col="3" colid="CU_TYPE" display="text"/>
+					<cell col="4" colid="CU_CALL_NO" display="text"/>
+					<cell col="5" colid="CU_HP_NO" display="text"/>
+					<cell col="6" colid="CU_ADDR" display="text"/>
+					<cell col="7" colid="NEW_YN" display="text"/>
+				</body>
+			</contents>
+		</Grid>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="16" ShadowColor="INACTIVECAPTION" TabOrder="17" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="24" Width="782"></Static>
+		<Edit Height="21" Id="edt_BIZ_ID" Left="96" TabOrder="18" Top="32" Width="121"></Edit>
+		<Static Align="Right" Height="16" Id="st_" Left="16" TabOrder="19" Text="사업자&#32;아이디" Top="32" Width="72"></Static>
+		<Static Align="Right" Height="13" Id="Static7" Left="24" TabOrder="21" Text="휴대폰&#32;번호" Top="64" Width="65"></Static>
+		<Edit Height="21" Id="edt_P_NUMBER" ImeMode="none" Left="96" TabOrder="20" Top="64" Width="121"></Edit>
+		<Static Height="13" Id="Static8" Left="247" TabOrder="22" Text="구분" Top="35" Width="49"></Static>
+		<Button Height="21" Id="btn_search" Left="624" OnClick="btn_search_OnClick" TabOrder="23" Text="조&#32;회" Top="32" Width="80"></Button>
+		<Button Height="21" Id="btn_save" Left="800" OnClick="btn_save_OnClick" TabOrder="24" Text="저&#32;장" Top="32" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static9" Left="16" TabOrder="25" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="384" Width="780"></Static>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="21" Id="cb_Level" INDEX="0" InnerDataset="GDS_001" Left="280" TabOrder="26" Top="32" Width="105"></Combo>
+		<Button Height="21" Id="btn_Add" Left="623" OnClick="btn_Add_OnClick" TabOrder="27" Text="추&#32;가" Top="392" Width="80"></Button>
+		<Static Align="Right" Height="16" Id="Static10" Left="24" TabOrder="29" Text="사업소&#32;번호" Top="400" Width="65"></Static>
+		<Edit BindDataset="GDS_CUSTOMER" Column="BIZ_ID" Height="21" Id="edt_I_userId" Left="88" TabOrder="28" Top="400" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static11" Left="31" TabOrder="31" Text="주소" Top="467" Width="49"></Static>
+		<Edit BindDataset="GDS_CUSTOMER" Column="CU_ADDR" Height="21" Id="edt_I_Rank" ImeMode="none" Left="88" TabOrder="30" Top="464" Width="121"></Edit>
+		<Combo BindDataset="ds_List" CodeColumn="CODE" Column="CU_TYPE" DataColumn="CODE_NM" Height="21" Id="cb_I_Level" INDEX="0" InnerDataset="GDS_001" Left="288" TabOrder="32" Top="400" Width="105"></Combo>
+		<Static Height="13" Id="Static12" Left="239" TabOrder="33" Text="업무구분" Top="403" Width="49"></Static>
+		<Static Align="Right" Height="13" Id="Static13" Left="31" TabOrder="35" Text="전화번호" Top="499" Width="49"></Static>
+		<Edit BindDataset="GDS_CUSTOMER" Column="CU_CALL_NO" Height="21" Id="edt_I_userHp" ImeMode="none" Left="88" TabOrder="34" Top="496" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static14" Left="31" TabOrder="37" Text="CEO&#32;이름" Top="435" Width="49"></Static>
+		<Edit BindDataset="GDS_CUSTOMER" Column="CU_NM" Height="21" Id="edt_I_userNm" Left="88" TabOrder="36" Top="432" Width="121"></Edit>
+		<Button Height="21" Id="btn_Del" Left="712" OnClick="btn_Del_OnClick" TabOrder="38" Text="삭&#32;제" Top="392" Width="80"></Button>
+		<Edit BindDataset="ds_List" Column="BIZ_ID" Height="21" Id="edt_I_bizId" ImeMode="none" Left="288" TabOrder="39" Top="464" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static15" Left="231" TabOrder="40" Text="휴대폰&#32;번호" Top="459" Width="49"></Static>
+	</Form>
+	<Script><![CDATA[function Add_OnLoadComplated(obj) {
+
+	
+	Services_List.Copy("GDS_CUSTOMER");
+	//Services_Level.Copy("GDS_Services_Combo");
+	
+	Services_List.AddColumn("FLAG");
+	
+	//Services_Level.Filter("Code!=''");
+}
+	
+function btn_service_OnClick(obj)
+{
+/*
+	for (var i=0; i<Services_List.GetRowCount(); i++) {
+	
+	var se_pid = Services_List.GetColumn(i,"p_id");
+	var se_pname = Services_List.GetColumn(i,"p_name");
+	var se_ptrouble = Services_List.GetColumn(i,"p_trouble");
+	var se_addr = Services_List.GetColumn(i,"addr");
+	var se_day = Services_List.GetColumn(i,"day");
+	var se_name = Services_List.GetColumn(i,"name");
+	var se_number = Services_List.GetColumn(i,"number");
+	var se_newyn = Services_List.GetColumn(i,"NEW_YN");
+	var se_diff = Services_List.GetColumn(i,"Diff");
+	
+	var indextemp = GDS_Services.SearchRow("p_id='"+pid+"'");
+	
+	GDS_Services.SetColumn(indextemp,"p_id",se_pid);
+	GDS_Services.SetColumn(indextemp,"p_name",se_pname);
+	GDS_Services.SetColumn(indextemp,"p_trouble",se_ptrouble);
+	GDS_Services.SetColumn(indextemp,"addr",se_addr);
+	GDS_Services.SetColumn(indextemp,"day",se_day);
+	GDS_Services.SetColumn(indextemp,"name",se_name);
+	GDS_Services.SetColumn(indextemp,"number",se_number);
+	GDS_Services.SetColumn(indextemp,"NEW_YN",se_newyn);
+	GDS_Services.SetColumn(indextemp,"Diff",se_diff);
+	
+	alert(se_number);
+	
+	*/
+	/*var strpid_lastindex = GDS_Services.GetColumn(GDS_Services.lastrow,"P_ID");
+	//alert(strpid_lastindex);
+	
+	var intpid_lastindex = toNumber(strpid_lastindex);
+	//alert(intpid_lastindex);
+	
+	var pluspid_lastindex = intpid_lastindex+1;
+	
+	GDS_Services.AddRow();
+	
+	GDS_Services.SetColumn(GDS_Services.row,"p_id",pluspid_lastindex);
+	GDS_Services.SetColumn(GDS_Services.row,"p_name",edit_p_name.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"p_trouble",edit_trouble.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"addr",edit_addr.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"day",Calendar0.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"name",edit_name.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"number",edit_number.Text);
+	GDS_Services.SetColumn(GDS_Services.row,"NEW_YN","Y");
+	GDS_Services.SetColumn(GDS_Services.row,"Diff",com_services.Value);
+	
+	//alert(com_services.Value);
+	
+	go("Services::Lookup.xml");
+	
+*/
+	}
+}
+
+function btn_search_OnClick(obj) 
+
+{
+	//Services_List.Copy("GDS_CUSTOMER");
+	//Services_Level.Copy("GDS_001");
+	//Services_List.AddColumn("FLAG");
+	
+	//Services_List.Filter("p_name =='"+edt_p_name.Text+"'")||("name =='"+edt_name.Text+"'")||("number =='"+edt_number.Text+"' ");
+
+
+	var pFilter = "";
+
+
+	if(length(edt_BIZ_ID.Value) != 0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "BIZ_ID=="+quote(edt_BIZ_ID.Text);
+		
+		}
+		
+	if (length(edt_P_NUMBER.Value) !=0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "CU_HP_NO=="+quote(edt_P_NUMBER.Text);
+		
+		}
+		
+	if (length(cb_Level.Value) !=0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "CU_TYPE=="+quote(cb_Level.Text);
+		
+		}
+		
+		Services_List.Filter(pFilter);
+		
+	}
+
+]]></Script>
+</Window>

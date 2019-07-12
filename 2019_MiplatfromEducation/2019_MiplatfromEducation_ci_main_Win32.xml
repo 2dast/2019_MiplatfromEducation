@@ -63,6 +63,7 @@
 				<colinfo id="BIZ_ADDR" size="256" summ="default" type="STRING"/>
 				<colinfo id="BIZ_TYPE" size="256" summ="default" type="STRING"/>
 				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<colinfo id="C_ID" size="256" summ="default" type="STRING"/>
 				<record>
 					<BIZ_ADDR>서울시&#32;성북구&#32;가리동</BIZ_ADDR>
 					<BIZ_CALL_NO>02-923-2125</BIZ_CALL_NO>
@@ -70,6 +71,7 @@
 					<BIZ_ID>111-12-11255</BIZ_ID>
 					<BIZ_NM>천하통일통신</BIZ_NM>
 					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<C_ID>1</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -79,6 +81,7 @@
 					<BIZ_ID>787-15-18433</BIZ_ID>
 					<BIZ_NM>천하AS</BIZ_NM>
 					<BIZ_TYPE>SERVICES</BIZ_TYPE>
+					<C_ID>2</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -88,6 +91,7 @@
 					<BIZ_ID>423-16-24232</BIZ_ID>
 					<BIZ_NM>신화통신</BIZ_NM>
 					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<C_ID>3</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -97,6 +101,7 @@
 					<BIZ_ID>234-12-12121</BIZ_ID>
 					<BIZ_NM>광진통신</BIZ_NM>
 					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<C_ID>4</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -106,6 +111,7 @@
 					<BIZ_ID>457-12-48081</BIZ_ID>
 					<BIZ_NM>광진AS</BIZ_NM>
 					<BIZ_TYPE>SERVICES</BIZ_TYPE>
+					<C_ID>5</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -115,6 +121,7 @@
 					<BIZ_ID>234-12-15891</BIZ_ID>
 					<BIZ_NM>본사</BIZ_NM>
 					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<C_ID>6</C_ID>
 					<NEW_YN>N</NEW_YN>
 				</record>
 				<record>
@@ -124,6 +131,7 @@
 					<BIZ_ID>291-30-49208</BIZ_ID>
 					<BIZ_NM>한일통신</BIZ_NM>
 					<BIZ_TYPE>SALES</BIZ_TYPE>
+					<C_ID>7</C_ID>
 					<NEW_YN>Y</NEW_YN>
 				</record>
 			</Contents>
@@ -439,19 +447,19 @@
 					<MENU_NM>Services</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID>Services::COMPANY</MENU_ID>
+					<MENU_ID>Services::Company</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
 					<MENU_NM>사업소&#32;관리</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID></MENU_ID>
+					<MENU_ID>Services::Lookup</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
-					<MENU_NM></MENU_NM>
+					<MENU_NM>서비스&#32;조회</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID></MENU_ID>
+					<MENU_ID>Services::Add</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
-					<MENU_NM></MENU_NM>
+					<MENU_NM>서비스&#32;예약</MENU_NM>
 				</record>
 				<record>
 					<MENU_ID></MENU_ID>
@@ -459,7 +467,7 @@
 					<MENU_NM>Parts</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID>Parts::Parts_form</MENU_ID>
+					<MENU_ID>Parts::PRODUCT</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
 					<MENU_NM>제품&#32;관리</MENU_NM>
 				</record>
@@ -668,6 +676,77 @@
 				</record>
 			</Contents>
 		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_Services">
+			<Contents>
+				<colinfo id="p_name" size="256" summ="default" type="STRING"/>
+				<colinfo id="p_trouble" size="256" summ="default" type="STRING"/>
+				<colinfo id="addr" size="256" summ="default" type="STRING"/>
+				<colinfo id="day" size="256" summ="default" type="STRING"/>
+				<colinfo id="name" size="256" summ="default" type="STRING"/>
+				<colinfo id="number" size="256" summ="default" type="STRING"/>
+				<colinfo id="p_id" size="256" summ="default" type="STRING"/>
+				<colinfo id="NEW_YN" size="256" summ="default" type="STRING"/>
+				<colinfo id="Diff" size="256" summ="default" type="STRING"/>
+				<record>
+					<addr>경기도&#32;남양주시&#32;다산동</addr>
+					<day>2019-07-01</day>
+					<Diff>센터방문</Diff>
+					<name>오소금</name>
+					<NEW_YN>N</NEW_YN>
+					<number>010-3212-2312</number>
+					<p_id>1</p_id>
+					<p_name>아이폰</p_name>
+					<p_trouble>액정&#32;파손</p_trouble>
+				</record>
+				<record>
+					<addr>서울&#32;광진구</addr>
+					<day>2019-07-08</day>
+					<Diff>출장서비스</Diff>
+					<name>박후추</name>
+					<NEW_YN>N</NEW_YN>
+					<number>010-1231-5823</number>
+					<p_id>2</p_id>
+					<p_name>갤럭시</p_name>
+					<p_trouble>배터리&#32;파손</p_trouble>
+				</record>
+				<record>
+					<addr>경기도&#32;파주시</addr>
+					<day>2019-07-11</day>
+					<Diff>센터방문</Diff>
+					<name>홍길동</name>
+					<NEW_YN>N</NEW_YN>
+					<number>010-1234-6943</number>
+					<p_id>3</p_id>
+					<p_name>갤럭시</p_name>
+					<p_trouble>소리&#32;안들림</p_trouble>
+				</record>
+				<record>
+					<addr>경기도&#32;구리시</addr>
+					<day>2019-07-12</day>
+					<Diff>출장서비스</Diff>
+					<name>오세유</name>
+					<NEW_YN>N</NEW_YN>
+					<number>010-5932-3212</number>
+					<p_id>4</p_id>
+					<p_name>아이폰</p_name>
+					<p_trouble>터치&#32;고장</p_trouble>
+				</record>
+			</Contents>
+		</Dataset>
+		<Dataset DataSetType="Dataset" Id="GDS_Services_Combo">
+			<Contents>
+				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+				<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
+				<record>
+					<CODE>센터방문</CODE>
+					<CODE_NM>센터방문</CODE_NM>
+				</record>
+				<record>
+					<CODE>출장서비스</CODE>
+					<CODE_NM>출장서비스</CODE_NM>
+				</record>
+			</Contents>
+		</Dataset>
 		<Dataset DataSetType="Dataset" Id="GDS_002">
 			<Contents>
 				<colinfo id="CODE" size="256" summ="default" type="STRING"/>
@@ -698,6 +777,5 @@
 			</Contents>
 		</Dataset>
 	</Datasets>
-	
 	<Resource Ext="res" Url="D:\2019_MiplatfromEducation\2019_MiplatfromEducation\Img\imgRes.res" Version="1000"/>
 </ConnectGroup>
