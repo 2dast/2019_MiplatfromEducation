@@ -467,7 +467,7 @@
 					<MENU_NM>Parts</MENU_NM>
 				</record>
 				<record>
-					<MENU_ID>Parts::PRODUCT</MENU_ID>
+					<MENU_ID>Parts::Parts_form</MENU_ID>
 					<MENU_LVL>2</MENU_LVL>
 					<MENU_NM>제품&#32;관리</MENU_NM>
 				</record>

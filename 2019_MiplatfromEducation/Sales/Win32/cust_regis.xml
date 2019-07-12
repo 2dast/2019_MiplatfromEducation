@@ -33,21 +33,18 @@
 						<col width="72"/>
 						<col width="84"/>
 						<col width="121"/>
-						<col width="33"/>
 					</columns>
 					<head>
 						<cell col="0" display="text" text="법인명"/>
 						<cell col="1" display="text" text="고객&#32;성함"/>
 						<cell col="2" display="text" text="고객&#32;분류"/>
 						<cell col="3" display="text" text="휴대폰번호"/>
-						<cell col="4" display="text" text="변경"/>
 					</head>
 					<body>
 						<cell col="0" colid="BIZ_ID" combocol="BIZ_ID" combodataset="GDS_COMPANY" combotext="BIZ_NM" display="combo"/>
 						<cell col="1" colid="CU_NM" display="text"/>
 						<cell col="2" colid="CU_TYPE" combocol="CODE" combodataset="COPY_002" combotext="CODE_NM" display="combo"/>
 						<cell col="3" colid="CU_HP_NO" display="text"/>
-						<cell col="4" colid="FALG" display="text"/>
 					</body>
 				</format>
 			</contents>
@@ -69,7 +66,7 @@
 
 }
 
-
+/*
 function Btn_register_OnClick(obj)
 {
 	
@@ -95,10 +92,10 @@ function Btn_register_OnClick(obj)
 	
 	go("Sales::cust_regis.xml");
 }
-
+*/	
 
 //저장 이벤트
-/*
+
 function btn_check_OnClick(obj)
 {
 	for (var i=0; i<COPY_CUSTOMER.GetRowCount(); i++) {
@@ -131,7 +128,7 @@ function btn_check_OnClick(obj)
 	
 
 }
-*/	
+
 
 //데이터 변경 이벤트
 function COPY_CUSTOMER_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)

@@ -5,7 +5,7 @@
 			<Dataset DataSetType="Dataset" Id="ds_List" OnColumnChanged="ds_List_OnColumnChanged"></Dataset>
 			<Dataset DataSetType="Dataset" Id="ds_Level"></Dataset>
 		</Datasets>
-		<Grid AutoFit="TRUE" BindDataset="ds_List" BkColor2="default" BoldHead="true" Bottom="363" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" LineColor="default" MinWidth="100" Right="784" TabOrder="1" TabStop="true" Top="96" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+		<Grid AutoFit="TRUE" BindDataset="ds_List" BkColor2="default" BoldHead="true" Bottom="361" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="2" LineColor="default" MinWidth="100" Right="786" TabOrder="1" TabStop="true" Top="94" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -44,30 +44,30 @@
 				</format>
 			</contents>
 		</Grid>
-		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="11" ShadowColor="INACTIVECAPTION" TabOrder="2" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="7" Width="782"></Static>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="3" ShadowColor="INACTIVECAPTION" TabOrder="2" Top="7" Width="782"></Static>
 		<Edit Height="21" Id="edt_userNm" Left="96" TabOrder="3" Top="16" Width="121"></Edit>
 		<Static Align="Right" Height="13" Id="st_" Left="39" TabOrder="4" Text="사업소명" Top="19" Width="49"></Static>
 		<Static Align="Right" Height="13" Id="Static0" Left="16" TabOrder="6" Text="사업소&#32;번호" Top="51" Width="72"></Static>
 		<Edit Height="21" Id="edt_BIZ_ID" ImeMode="none" Left="96" TabOrder="5" Top="48" Width="121"></Edit>
 		<Static Height="13" Id="Static1" Left="247" TabOrder="7" Text="사업구분" Top="19" Width="49"></Static>
-		<Button Height="21" Id="btn_search" Left="616" OnClick="btn_search_OnClick" TabOrder="8" Text="조&#32;회" Top="16" Width="80"></Button>
-		<Button Height="21" Id="btn_save" Left="704" OnClick="btn_save_OnClick" TabOrder="9" Text="저&#32;장" Top="16" Width="80"></Button>
-		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="8" TabOrder="10" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="368" Width="780"></Static>
-		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="21" Id="cb_Level" INDEX="0" InnerDataset="GDS_001" Left="296" TabOrder="11" Top="8" Width="105"></Combo>
-		<Button Height="21" Id="btn_Add" Left="615" OnClick="btn_Add_OnClick" TabOrder="12" Text="추&#32;가" Top="376" Width="80"></Button>
-		<Static Align="Right" Height="13" Id="Static3" Left="31" TabOrder="14" Text="아이디" Top="387" Width="49"></Static>
-		<Edit BindDataset="ds_List" Column="BIZ_ID" Height="21" Id="edt_I_companyId" Left="88" TabOrder="13" Top="384" Width="121"></Edit>
-		<Static Align="Right" Height="13" Id="Static4" Left="32" TabOrder="16" Text="CEO&#32;이름" Top="480" Width="49"></Static>
-		<Edit BindDataset="ds_List" Column="BIZ_CEO_NM" Height="21" Id="edt_I_ceoNm" ImeMode="none" Left="88" TabOrder="15" Top="480" Width="121"></Edit>
-		<Combo BindDataset="ds_List" CodeColumn="CODE" Column="BIZ_TYPE" DataColumn="CODE_NM" Height="21" Id="cb_I_levelType" INDEX="0" InnerDataset="ds_Level" Left="288" TabOrder="17" Top="384" Width="105"></Combo>
-		<Static Height="13" Id="Static5" Left="239" TabOrder="18" Text="사업구분" Top="387" Width="49"></Static>
-		<Static Align="Right" Height="13" Id="Static6" Left="32" TabOrder="20" Text="연락처" Top="456" Width="49"></Static>
-		<Edit BindDataset="ds_List" Column="BIZ_CALL_NO" Height="21" Id="edt_I_companyHp" ImeMode="none" Left="88" TabOrder="19" Top="456" Width="121"></Edit>
-		<Static Align="Right" Height="13" Id="Static7" Left="31" TabOrder="22" Text="사업소명" Top="419" Width="49"></Static>
-		<Edit BindDataset="ds_List" Column="BIZ_NM" Height="21" Id="edt_I_companyNm" Left="88" TabOrder="21" Top="424" Width="121"></Edit>
-		<Button Height="21" Id="btn_Del" Left="704" OnClick="btn_Del_OnClick" TabOrder="23" Text="삭&#32;제" Top="376" Width="80"></Button>
-		<Edit BindDataset="ds_List" Column="BIZ_ADDR" Height="21" Id="edt_I_companyaddr" ImeMode="none" Left="288" TabOrder="24" Top="448" Width="121"></Edit>
-		<Static Align="Right" Height="13" Id="Static8" Left="232" TabOrder="25" Text="회사주소" Top="448" Width="49"></Static>
+		<Button Height="21" Id="btn_search" Left="608" OnClick="btn_search_OnClick" TabOrder="8" Text="조&#32;회" Top="16" Width="80"></Button>
+		<Button Height="21" Id="btn_save" Left="696" OnClick="btn_save_OnClick" TabOrder="9" Text="저&#32;장" Top="16" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="3" TabOrder="10" Top="364" Width="780"></Static>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="21" Id="cb_Level" INDEX="0" InnerDataset="GDS_001" Left="296" TabOrder="11" Top="16" Width="105"></Combo>
+		<Button Font="Tahoma,18" Height="24" Id="btn_Add" Left="568" OnClick="btn_Add_OnClick" TabOrder="12" Text="추&#32;가" Top="368" Width="104"></Button>
+		<Static Align="Right" Height="13" Id="Static3" Left="24" TabOrder="14" Text="아이디" Top="400" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="BIZ_ID" Height="21" Id="edt_I_companyId" Left="80" TabOrder="13" Top="400" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static4" Left="224" TabOrder="16" Text="CEO&#32;이름" Top="408" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="BIZ_CEO_NM" Height="21" Id="edt_I_ceoNm" ImeMode="none" Left="280" TabOrder="15" Top="400" Width="121"></Edit>
+		<Combo BindDataset="ds_List" CodeColumn="CODE" Column="BIZ_TYPE" DataColumn="CODE_NM" Height="21" Id="cb_I_levelType" INDEX="0" InnerDataset="ds_Level" Left="280" TabOrder="17" Top="432" Width="105"></Combo>
+		<Static Height="13" Id="Static5" Left="232" TabOrder="18" Text="사업구분" Top="432" Width="49"></Static>
+		<Static Align="Right" Height="13" Id="Static6" Left="24" TabOrder="20" Text="연락처" Top="464" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="BIZ_CALL_NO" Height="21" Id="edt_I_companyHp" ImeMode="none" Left="80" TabOrder="19" Top="464" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static7" Left="24" TabOrder="22" Text="사업소명" Top="432" Width="49"></Static>
+		<Edit BindDataset="ds_List" Column="BIZ_NM" Height="21" Id="edt_I_companyNm" Left="80" TabOrder="21" Top="432" Width="121"></Edit>
+		<Button Font="Tahoma,18" Height="24" Id="btn_Del" Left="680" OnClick="btn_Del_OnClick" TabOrder="23" Text="삭&#32;제" Top="368" Width="96"></Button>
+		<Edit BindDataset="ds_List" Column="BIZ_ADDR" Height="21" Id="edt_I_companyaddr" ImeMode="none" Left="280" TabOrder="24" Top="464" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="Static8" Left="224" TabOrder="25" Text="회사주소" Top="464" Width="49"></Static>
 	</Form>
 	<Script><![CDATA[//화면오픈이벤트
 
@@ -117,7 +117,7 @@ function btn_search_OnClick(obj)
 
 //추가버튼클릭이벤트
 function btn_Add_OnClick(obj)
-{
+{	
 	/*var strcid_lastindex = ds_List.GetColumn(ds_List.lastrow,"C_ID");
 	var intcid_lastindex = toNumber(strcid_lastindex);
 	var pluscid_lastindex = intcid_lastindex+1;

@@ -54,7 +54,7 @@
 		<Static Font="Tahoma,11,Bold" Height="23" Id="Static11" Left="250" TabOrder="26" Text="비용" Top="449" Width="24"></Static>
 		<Edit BindDataset="COPY_CONTRACT" Column="BIZ_NM" Height="34" Id="input_company" Left="88" TabOrder="25" Top="486" Width="121"></Edit>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static12" Left="40" TabOrder="24" Text="법인명" Top="489" Width="40"></Static>
-		<Grid AutoFit="TRUE" BindDataset="GDS_CONTRACT" BkColor2="default" BoldHead="true" Bottom="216" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="128" Id="contract_grid" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="contract_grid_OnCellClick" Right="792" TabOrder="30" TabStop="true" Top="88" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+		<Grid AutoFit="TRUE" BindDataset="GDS_CONTRACT" BkColor2="default" BoldHead="true" Bottom="368" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="280" Id="contract_grid" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="contract_grid_OnCellClick" Right="792" TabOrder="30" TabStop="true" Top="88" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -88,61 +88,6 @@
 						<cell col="7" colid="CT_ID" display="text"/>
 					</body>
 				</format>
-			</contents>
-		</Grid>
-		<Grid BindDataset="COPY_CONTRACT" BkColor2="default" BoldHead="true" Bottom="366" Enable="true" EndLineColor="default" Height="146" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="default" Right="789" TabOrder="31" TabStop="true" Top="220" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="781">
-			<contents>
-				<columns>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-					<col width="80"/>
-				</columns>
-				<head>
-					<cell col="0" display="text" text="BIZ_ID"/>
-					<cell col="1" display="text" text="BIZ_NM"/>
-					<cell col="2" display="text" text="CU_ID"/>
-					<cell col="3" display="text" text="CU_NM"/>
-					<cell col="4" display="text" text="CU_TYPE"/>
-					<cell col="5" display="text" text="CU_CALL_NO"/>
-					<cell col="6" display="text" text="CU_HP_NO"/>
-					<cell col="7" display="text" text="CU_ADDR"/>
-					<cell col="8" display="text" text="PD_ID"/>
-					<cell col="9" display="text" text="PD_NM"/>
-					<cell col="10" display="text" text="CT_COST"/>
-					<cell col="11" display="text" text="CT_HOPE_NO"/>
-					<cell col="12" display="text" text="CT_DATE"/>
-					<cell col="13" display="text" text="CT_TYPE"/>
-					<cell col="14" display="text" text="CT_ID"/>
-				</head>
-				<body>
-					<cell col="0" colid="BIZ_ID" display="text"/>
-					<cell col="1" colid="BIZ_NM" display="text"/>
-					<cell col="2" colid="CU_ID" display="text"/>
-					<cell col="3" colid="CU_NM" display="text"/>
-					<cell col="4" colid="CU_TYPE" display="text"/>
-					<cell col="5" colid="CU_CALL_NO" display="text"/>
-					<cell col="6" colid="CU_HP_NO" display="text"/>
-					<cell col="7" colid="CU_ADDR" display="text"/>
-					<cell col="8" colid="PD_ID" display="text"/>
-					<cell col="9" colid="PD_NM" display="text"/>
-					<cell col="10" colid="CT_COST" display="text"/>
-					<cell col="11" colid="CT_HOPE_NO" display="text"/>
-					<cell col="12" colid="CT_DATE" display="text"/>
-					<cell col="13" colid="CT_TYPE" display="text"/>
-					<cell col="14" colid="CT_ID" display="text"/>
-				</body>
 			</contents>
 		</Grid>
 	</Form>

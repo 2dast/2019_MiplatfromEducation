@@ -19,16 +19,16 @@
 			</Dataset>
 		</Datasets>
 		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" ShadowColor="INACTIVECAPTION" TabOrder="15" Width="782"></Static>
-		<Edit Height="24" Id="pd_name" Left="88" TabOrder="4" Top="64" Width="121"></Edit>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="st_" Left="8" TabOrder="16" Text="제품명" Top="72" Width="73"></Static>
-		<Static Align="Right" Height="13" Id="Static0" Left="391" TabOrder="17" Text="~" Top="67" Width="49"></Static>
-		<Button Font="굴림,11,Bold" Height="32" Id="btn_search" Left="600" OnClick="btn_search_OnClick" TabOrder="14" Text="조&#32;회" Top="64" Width="80"></Button>
+		<Edit Height="24" Id="pd_name" Left="72" TabOrder="4" Top="56" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="st_" Left="-8" TabOrder="16" Text="제품명" Top="64" Width="73"></Static>
+		<Static Align="Right" Height="13" Id="Static0" Left="375" TabOrder="17" Text="~" Top="59" Width="49"></Static>
+		<Button Font="굴림,11,Bold" Height="32" Id="btn_search" Left="600" OnClick="btn_search_OnClick" TabOrder="14" Text="조&#32;회" Top="56" Width="80"></Button>
 		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="2" TabOrder="18" Top="370" Width="780"></Static>
 		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="8" TabOrder="19" Text="제품명" Top="384" Width="57"></Static>
 		<Edit BindDataset="ds_Parts" Column="PD_ID" Height="32" Id="edit_id" Left="72" TabOrder="8" Top="376" Width="121"></Edit>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="215" TabOrder="20" Text="가&#32;&#32;격" Top="67" Width="73"></Static>
-		<Edit Height="24" Id="pd_min_price" Left="296" TabOrder="6" Top="64" Width="121"></Edit>
-		<Edit Height="24" Id="pd_max_price" Left="456" TabOrder="7" Top="64" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="199" TabOrder="20" Text="가&#32;&#32;격" Top="59" Width="73"></Static>
+		<Edit Height="24" Id="pd_min_price" Left="280" TabOrder="6" Top="56" Width="121"></Edit>
+		<Edit Height="24" Id="pd_max_price" Left="440" TabOrder="7" Top="56" Width="121"></Edit>
 		<Button Font="Tahoma,11" Height="32" Id="btn_insert" Left="432" OnClick="btn_insert_OnClick" TabOrder="1" Text="추&#32;&#32;가" Top="376" Width="80"></Button>
 		<Button Font="Tahoma,11" Height="32" Id="btn_delete" Left="520" OnClick="btn_delete_OnClick" TabOrder="0" Text="삭&#32;&#32;제" Top="376" Width="80"></Button>
 		<Static Color="snow" Font="Tahoma,25" Height="48" Id="Static9" Left="480" TabOrder="21" Text="부&#32;&#32;품&#32;&#32;관&#32;&#32;리" Top="8" Width="264"></Static>
@@ -71,16 +71,16 @@
 				</format>
 			</contents>
 		</Grid>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="8" TabOrder="26" Text="제품ID" Top="24" Width="73"></Static>
-		<Edit Height="24" Id="pd_id" Left="88" TabOrder="3" Top="16" Width="121"></Edit>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="216" TabOrder="27" Text="가격타입" Top="24" Width="73"></Static>
-		<Combo CodeColumn="CODE" DataColumn="CODE" Height="21" Id="pd_price_type" INDEX="0" InnerDataset="ds_price_type" Left="297" TabOrder="5" Top="22" Width="127"></Combo>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="-8" TabOrder="26" Text="제품ID" Top="16" Width="73"></Static>
+		<Edit Height="24" Id="pd_id" Left="72" TabOrder="3" Top="8" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="200" TabOrder="27" Text="가격타입" Top="16" Width="73"></Static>
+		<Combo CodeColumn="CODE" DataColumn="CODE" Height="21" Id="pd_price_type" INDEX="0" InnerDataset="ds_price_type" Left="281" TabOrder="5" Top="14" Width="127"></Combo>
 		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="192" TabOrder="28" Text="제품명" Top="384" Width="57"></Static>
 		<Edit BindDataset="ds_Parts" Column="PD_NM" Height="32" Id="edit_name" Left="256" TabOrder="9" Top="376" Width="121"></Edit>
 		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="192" TabOrder="29" Text="소매가" Top="424" Width="57"></Static>
 		<Edit BindDataset="ds_Parts" Column="PD_RETAIL_PRICE" Height="32" Id="edit_retail" Left="256" TabOrder="11" Top="416" Width="121"></Edit>
 		<Button Font="Tahoma,16,Bold" Height="52" Id="btn_final" Left="448" OnClick="btn_final_OnClick" TabOrder="30" Text="변경사항&#32;저장" Top="424" Width="133"></Button>
-		<Button Font="굴림,11,Bold" Height="32" Id="btn_return" Left="688" OnClick="btn_return_OnClick" TabOrder="31" Text="되돌리기" Top="64" Width="80"></Button>
+		<Button Font="굴림,11,Bold" Height="32" Id="btn_return" Left="688" OnClick="btn_return_OnClick" TabOrder="31" Text="되돌리기" Top="56" Width="80"></Button>
 	</Form>
 	<Script><![CDATA[//폼이 로드될때
 function form_OnLoadCompleted(obj)

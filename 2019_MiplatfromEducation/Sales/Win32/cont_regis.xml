@@ -95,12 +95,11 @@
 		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="32" Id="search_type" InnerDataset="GDS_002" Left="376" TabOrder="27" Top="64" Width="140"></Combo>
 		<Button BKColor="whitesmoke" Font="Tahoma,11,Bold" Height="29" Id="Btn_search" Left="688" OnClick="Btn_search_OnClick" TabOrder="29" Text="조건&#32;검색" Top="64" Width="64"></Button>
 		<Button Font="Tahoma,11,Bold" Height="29" Id="Btn_reset" Left="616" OnClick="Btn_reset_OnClick" TabOrder="28" Text="전체&#32;검색" Top="64" Width="64"></Button>
-		<Edit Font="맑은&#32;고딕,10" Height="32" Id="search_company" Left="128" TabOrder="30" ToolTipText="사업자&#32;번호" Top="48" Width="140"></Edit>
-		<Shape Bottom="129" Height="16" Id="Shape0" Left="8" Right="776" TabOrder="31" Top="113" Width="768"></Shape>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static10" Left="40" TabOrder="32" Text="사업자&#32;번호" Top="72" Width="88"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static9" Left="64" TabOrder="33" Text="계약&#32;구분" Top="464" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static11" Left="296" TabOrder="34" Text="고객&#32;분류" Top="72" Width="67"></Static>
-		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Height="32" Id="companycombo" InnerDataset="GDS_COMPANY" Left="128" TabOrder="35" Top="80" Width="140"></Combo>
+		<Shape Bottom="129" Height="16" Id="Shape0" Left="8" Right="776" TabOrder="30" Top="113" Width="768"></Shape>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static10" Left="40" TabOrder="31" Text="사업자&#32;번호" Top="72" Width="88"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static9" Left="64" TabOrder="32" Text="계약&#32;구분" Top="464" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static11" Left="296" TabOrder="33" Text="고객&#32;분류" Top="72" Width="67"></Static>
+		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Height="32" Id="companycombo" InnerDataset="GDS_COMPANY" Left="128" TabOrder="34" Top="64" Width="140"></Combo>
 	</Form>
 	<Script><![CDATA[
 function contregis_OnLoadCompleted(obj)
@@ -197,11 +196,11 @@ function Btn_search_OnClick(obj)
 	
 	var pFilter = "";
 	
-
+	/*
 	if (length(search_company.Text) != 0) {
 		
 		pFilter += "BIZ_ID=="+quote(search_company.Text);
-	}
+	}*/
 	
 	if (length(companycombo.value) != 0) {
 		

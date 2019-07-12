@@ -19,18 +19,18 @@
 			</Dataset>
 			<Dataset DataSetType="Dataset" Id="ds_PD"></Dataset>
 		</Datasets>
-		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="7" Top="8" Width="782"></Static>
-		<Button Font="굴림,11,Bold" Height="40" Id="btn_search" Left="584" OnClick="btn_search_OnClick" TabOrder="6" Text="조&#32;회" Top="64" Width="80"></Button>
-		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="10" TabOrder="8" Top="378" Width="780"></Static>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="16" TabOrder="9" Text="센터명" Top="392" Width="57"></Static>
-		<Edit BindDataset="ds_PS" Column="PS_CENTER" Height="32" Id="edit_center" Left="80" TabOrder="3" Top="384" Width="121"></Edit>
-		<Button Font="Tahoma,11" Height="32" Id="btn_insert" Left="440" OnClick="btn_insert_OnClick" TabOrder="2" Text="추&#32;&#32;가" Top="384" Width="80"></Button>
-		<Button Font="Tahoma,11" Height="32" Id="btn_delete" Left="528" OnClick="btn_delete_OnClick" TabOrder="1" Text="삭&#32;&#32;제" Top="384" Width="80"></Button>
-		<Static Color="snow" Font="굴림,24,Bold" Height="48" Id="Static9" Left="568" TabOrder="10" Text="서&#32;비&#32;스&#32;센&#32;터" Top="24" Width="360"></Static>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static4" Left="16" TabOrder="11" Text="모델명" Top="432" Width="57"></Static>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static6" Left="15" TabOrder="12" Text="처리여부" Top="472" Width="57"></Static>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static7" Left="15" TabOrder="13" Text="날&#32;&#32;&#32;짜" Top="512" Width="57"></Static>
-		<Grid AutoFit="TRUE" BindDataset="ds_PS" BkColor2="default" BoldHead="true" Bottom="379" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" Right="792" TabOrder="14" TabStop="true" Top="112" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="1" ShadowColor="INACTIVECAPTION" TabOrder="7" Top="3" Width="790"></Static>
+		<Button Font="굴림,11,Bold" Height="40" Id="btn_search" Left="577" OnClick="btn_search_OnClick" TabOrder="6" Text="조&#32;회" Top="59" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="3" TabOrder="8" Top="373" Width="788"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="9" TabOrder="9" Text="센터명" Top="387" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_CENTER" Height="32" Id="edit_center" Left="73" TabOrder="3" Top="379" Width="121"></Edit>
+		<Button Font="Tahoma,11" Height="32" Id="btn_insert" Left="433" OnClick="btn_insert_OnClick" TabOrder="2" Text="추&#32;&#32;가" Top="379" Width="80"></Button>
+		<Button Font="Tahoma,11" Height="32" Id="btn_delete" Left="521" OnClick="btn_delete_OnClick" TabOrder="1" Text="삭&#32;&#32;제" Top="379" Width="80"></Button>
+		<Static Color="snow" Font="굴림,24,Bold" Height="48" Id="Static9" Left="561" TabOrder="10" Text="서&#32;비&#32;스&#32;센&#32;터" Top="19" Width="360"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static4" Left="9" TabOrder="11" Text="모델명" Top="427" Width="57"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static6" Left="8" TabOrder="12" Text="처리여부" Top="467" Width="57"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static7" Left="8" TabOrder="13" Text="날&#32;&#32;&#32;짜" Top="507" Width="57"></Static>
+		<Grid AutoFit="TRUE" BindDataset="ds_PS" BkColor2="default" BoldHead="true" Bottom="374" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="1" LineColor="default" MinWidth="100" Right="793" TabOrder="14" TabStop="true" Top="107" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="792">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -66,26 +66,26 @@
 				</format>
 			</contents>
 		</Grid>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="-8" TabOrder="15" Text="센터명" Top="24" Width="73"></Static>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="200" TabOrder="16" Text="담당자" Top="392" Width="57"></Static>
-		<Edit BindDataset="ds_PS" Column="PS_USER" Height="32" Id="edit_user" Left="264" TabOrder="4" Top="384" Width="121"></Edit>
-		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="200" TabOrder="17" Text="고객명" Top="432" Width="57"></Static>
-		<Edit BindDataset="ds_PS" Column="PS_CU" Height="32" Id="edit_cu" Left="264" TabOrder="5" Top="424" Width="121"></Edit>
-		<Button Font="Tahoma,16,Bold" Height="52" Id="btn_change" Left="456" OnClick="btn_change_OnClick" TabOrder="18" Text="변경사항&#32;저장" Top="432" Width="133"></Button>
-		<Edit Height="29" Id="ps_center" Left="72" TabOrder="19" Top="16" Width="116"></Edit>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static0" Left="176" TabOrder="20" Text="담당자" Top="24" Width="73"></Static>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="360" TabOrder="21" Text="모델명" Top="24" Width="73"></Static>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="-8" TabOrder="22" Text="고객명" Top="72" Width="73"></Static>
-		<Edit Height="29" Id="ps_cu" Left="72" TabOrder="23" Top="66" Width="116"></Edit>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static12" Left="184" TabOrder="24" Text="처리여부" Top="72" Width="73"></Static>
-		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static13" Left="368" TabOrder="25" Text="등록날짜" Top="72" Width="73"></Static>
-		<Combo CodeColumn="CHECK" DataColumn="CHECK" Height="28" Id="ps_proc" InnerDataset="ds_Check" Left="256" TabOrder="26" Top="66" Width="118"></Combo>
-		<Calendar Height="27" Id="ps_date" Left="440" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="27" Top="68" Width="116"></Calendar>
-		<Edit Height="29" Id="ps_user" Left="256" TabOrder="28" Top="16" Width="116"></Edit>
-		<Combo BindDataset="ds_PS" CodeColumn="CHECK" Column="PS_PROC" DataColumn="CHECK" Height="28" Id="edit_proc" InnerDataset="ds_Check" Left="80" TabOrder="29" Top="464" Width="123"></Combo>
-		<Calendar BindDataset="ds_PS" Column="PS_DATE" Height="27" Id="edit_date" Left="80" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="30" Top="504" Width="123"></Calendar>
-		<Combo CodeColumn="PD_ID" DataColumn="PD_ID" Height="28" Id="ps_model" InnerDataset="ds_PD" Left="440" TabOrder="31" Top="18" Width="118"></Combo>
-		<Combo BindDataset="ds_PS" CodeColumn="PD_ID" Column="PS_MODEL" DataColumn="PD_ID" Height="28" Id="edit_model" InnerDataset="ds_PD" Left="80" TabOrder="32" Top="424" Width="123"></Combo>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="-15" TabOrder="15" Text="센터명" Top="19" Width="73"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="193" TabOrder="16" Text="담당자" Top="387" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_USER" Height="32" Id="edit_user" Left="257" TabOrder="4" Top="379" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="193" TabOrder="17" Text="고객명" Top="427" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_CU" Height="32" Id="edit_cu" Left="257" TabOrder="5" Top="419" Width="121"></Edit>
+		<Button Font="Tahoma,16,Bold" Height="52" Id="btn_change" Left="449" OnClick="btn_change_OnClick" TabOrder="18" Text="변경사항&#32;저장" Top="427" Width="133"></Button>
+		<Edit Height="29" Id="ps_center" Left="65" TabOrder="19" Top="11" Width="116"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static0" Left="169" TabOrder="20" Text="담당자" Top="19" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="353" TabOrder="21" Text="모델명" Top="19" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="-15" TabOrder="22" Text="고객명" Top="67" Width="73"></Static>
+		<Edit Height="29" Id="ps_cu" Left="65" TabOrder="23" Top="61" Width="116"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static12" Left="177" TabOrder="24" Text="처리여부" Top="67" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static13" Left="361" TabOrder="25" Text="등록날짜" Top="67" Width="73"></Static>
+		<Combo CodeColumn="CHECK" DataColumn="CHECK" Height="28" Id="ps_proc" InnerDataset="ds_Check" Left="249" TabOrder="26" Top="61" Width="118"></Combo>
+		<Calendar Height="27" Id="ps_date" Left="433" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="27" Top="63" Width="116"></Calendar>
+		<Edit Height="29" Id="ps_user" Left="249" TabOrder="28" Top="11" Width="116"></Edit>
+		<Combo BindDataset="ds_PS" CodeColumn="CHECK" Column="PS_PROC" DataColumn="CHECK" Height="28" Id="edit_proc" InnerDataset="ds_Check" Left="73" TabOrder="29" Top="459" Width="123"></Combo>
+		<Calendar BindDataset="ds_PS" Column="PS_DATE" Height="27" Id="edit_date" Left="73" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="30" Top="499" Width="123"></Calendar>
+		<Combo CodeColumn="PD_ID" DataColumn="PD_ID" Height="28" Id="ps_model" InnerDataset="ds_PD" Left="433" TabOrder="31" Top="13" Width="118"></Combo>
+		<Combo BindDataset="ds_PS" CodeColumn="PD_ID" Column="PS_MODEL" DataColumn="PD_ID" Height="28" Id="edit_model" InnerDataset="ds_PD" Left="73" TabOrder="32" Top="419" Width="123"></Combo>
 	</Form>
 	<Script><![CDATA[//form 실행될 때
 function form_OnLoadCompleted(obj)

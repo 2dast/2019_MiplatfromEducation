@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window>
-	<Form Height="648" Id="Lookup" Left="8" OnLoadCompleted="Lookup_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="920" WorkArea="true">
+	<Form Height="543" Id="Lookup" Left="8" OnLoadCompleted="Lookup_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
 		<Datasets>
 			<Dataset DataSetType="Dataset" Id="Services_List" OnColumnChanged="ds_List_OnColumnChanged"></Dataset>
 			<Dataset DataSetType="Dataset" Id="Services_Level">
@@ -10,7 +10,8 @@
 				</Contents>
 			</Dataset>
 		</Datasets>
-		<Grid AutoFit="TRUE" BindDataset="GDS_Services" BkColor2="default" BoldHead="true" Bottom="408" Enable="true" EndLineColor="default" Height="264" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" Right="912" TabOrder="1" TabStop="true" Top="144" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="904">
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="208" Id="Static1" Left="5" TabOrder="11" Top="327" Width="792"></Static>
+		<Grid AutoFit="TRUE" BindDataset="GDS_Services" BkColor2="default" BoldHead="true" Bottom="324" Enable="true" EndLineColor="default" Height="224" Id="grd_List" InputPanel="FALSE" Left="3" LineColor="default" MinWidth="100" Right="797" TabOrder="1" TabStop="true" Top="100" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="794">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -52,31 +53,28 @@
 				</format>
 			</contents>
 		</Grid>
-		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="120" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="2" Text="&#10;조회&#32;컴포넌트&#32;영역" Top="24" Width="896"></Static>
-		<Edit Height="21" Id="edt_p_name" Left="96" TabOrder="3" Top="32" Width="121"></Edit>
-		<Static Align="Right" Height="13" Id="st_" Left="39" TabOrder="4" Text="제품명" Top="35" Width="49"></Static>
-		<Static Align="Right" Height="13" Id="Static0" Left="39" TabOrder="6" Text="고객명" Top="67" Width="49"></Static>
-		<Edit Height="21" Id="edt_name" ImeMode="none" Left="96" TabOrder="5" Top="64" Width="121"></Edit>
-		<Button Height="56" Id="btn_search" Left="568" OnClick="btn_Lookup" TabOrder="7" Text="서비스&#32;조회" Top="48" Width="224"></Button>
-		<Button Height="21" Id="btn_save" Left="816" TabOrder="8" Text="저&#32;장" Top="64" Width="80"></Button>
-		<Edit Height="19" Id="edt_number" Left="96" TabOrder="9" Top="96" Width="120"></Edit>
-		<Static Height="20" Id="Static2" Left="56" TabOrder="10" Text="연락처" Top="96" Width="37"></Static>
-		<Button Font="Tahoma,12" Height="48" Id="Button0" Left="544" OnClick="Button0_OnClick" TabOrder="11" Text="서비스&#32;예약&#32;취소" Top="512" Width="232"></Button>
-		<Button Height="21" Id="Button1" Left="808" OnClick="Button1_OnClick" TabOrder="12" Text="예약&#32;변경" Top="96" Width="80"></Button>
-		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="216" Id="Static1" Left="8" TabOrder="13" Text="&#10;&#10;입력&#32;Components&#32;영역" Top="408" Width="904"></Static>
-		<Edit Font="Tahoma,12" Height="32" Id="edit_p_name" Left="16" TabOrder="14" Top="432" Width="128"></Edit>
-		<Static Height="30" Id="Static3" Left="32" TabOrder="15" Text="제품명" Top="416" Width="260"></Static>
-		<Static Height="30" Id="Static4" Left="16" TabOrder="16" Text="주소" Top="488" Width="260"></Static>
-		<Static Height="30" Id="Static5" Left="16" TabOrder="17" Text="연락처" Top="544" Width="212"></Static>
-		<Button Font="Tahoma,12" Height="51" Id="btn_service" Left="544" OnClick="btn_service_OnClick" TabOrder="18" Text="서비스&#32;예약&#32;수정" Top="456" Width="232"></Button>
-		<Edit Font="Tahoma,12" Height="40" Id="edit_number" Left="16" TabOrder="19" Top="560" Width="128"></Edit>
-		<Edit Font="Tahoma,12" Height="32" Id="edit_addr" Left="16" TabOrder="20" Top="504" Width="128"></Edit>
-		<Edit Font="Tahoma,12" Height="48" Id="edit_trouble" Left="152" TabOrder="21" Top="560" Width="296"></Edit>
-		<Edit Font="Tahoma,12" Height="32" Id="edit_name" Left="152" TabOrder="22" Top="432" Width="128"></Edit>
-		<Static Height="30" Id="Static7" Left="152" TabOrder="23" Text="고객명" Top="416" Width="260"></Static>
-		<Static Height="30" Id="Static8" Left="152" TabOrder="24" Text="고장증세" Top="544" Width="260"></Static>
-		<Combo BindDataset="GDS_Services" CodeColumn="CODE_NM" Column="Diff" DataColumn="CODE" Font="Tahoma,12" Height="32" Id="com_services" ImeMode="none" InnerDataset="GDS_Services_Combo" Left="152" TabOrder="25" Top="504" Width="128"></Combo>
-		<Static Height="24" Id="Static9" Left="152" TabOrder="26" Text="구분" Top="488" Width="96"></Static>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="96" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="3" ShadowColor="INACTIVECAPTION" TabOrder="2" Top="3" Width="792"></Static>
+		<Edit Height="21" Id="edt_p_name" Left="72" TabOrder="3" Top="8" Width="121"></Edit>
+		<Static Align="Right" Height="13" Id="st_" Left="16" TabOrder="4" Text="제품명" Top="12" Width="49"></Static>
+		<Static Align="Right" Height="13" Id="Static0" Left="15" TabOrder="6" Text="고객명" Top="43" Width="49"></Static>
+		<Edit Height="21" Id="edt_name" ImeMode="none" Left="72" TabOrder="5" Top="40" Width="121"></Edit>
+		<Button Height="32" Id="btn_search" Left="712" OnClick="btn_Lookup" TabOrder="7" Text="서비스&#32;조회" Top="8" Width="80"></Button>
+		<Edit Height="19" Id="edt_number" Left="72" TabOrder="8" Top="72" Width="120"></Edit>
+		<Static Height="20" Id="Static2" Left="34" TabOrder="9" Text="연락처" Top="75" Width="37"></Static>
+		<Button Font="Tahoma,12" Height="35" Id="Button0" Left="689" OnClick="Button0_OnClick" TabOrder="10" Text="서비스&#32;예약&#32;취소" Top="334" Width="104"></Button>
+		<Edit BindDataset="GDS_Services" Column="p_name" Font="Tahoma,12" Height="32" Id="edit_p_name" Left="24" TabOrder="12" Top="352" Width="128"></Edit>
+		<Static Height="30" Id="Static3" Left="24" TabOrder="13" Text="제품명" Top="336" Width="260"></Static>
+		<Static Height="30" Id="Static4" Left="24" TabOrder="14" Text="주소" Top="384" Width="260"></Static>
+		<Static Height="30" Id="Static5" Left="24" TabOrder="15" Text="연락처" Top="434" Width="212"></Static>
+		<Button Font="Tahoma,12" Height="35" Id="btn_service" Left="577" OnClick="btn_service_OnClick" TabOrder="16" Text="서비스&#32;예약&#32;수정" Top="334" Width="104"></Button>
+		<Edit BindDataset="GDS_Services" Column="number" Font="Tahoma,12" Height="40" Id="edit_number" Left="24" TabOrder="17" Top="448" Width="128"></Edit>
+		<Edit BindDataset="GDS_Services" Column="addr" Font="Tahoma,12" Height="32" Id="edit_addr" Left="24" TabOrder="18" Top="400" Width="128"></Edit>
+		<Edit BindDataset="GDS_Services" Column="p_trouble" Font="Tahoma,12" Height="48" Id="edit_trouble" Left="192" TabOrder="19" Top="456" Width="296"></Edit>
+		<Edit BindDataset="GDS_Services" Column="name" Font="Tahoma,12" Height="32" Id="edit_name" Left="192" TabOrder="20" Top="352" Width="128"></Edit>
+		<Static Height="30" Id="Static7" Left="195" TabOrder="21" Text="고객명" Top="336" Width="260"></Static>
+		<Static Height="30" Id="Static8" Left="194" TabOrder="22" Text="고장증세" Top="440" Width="260"></Static>
+		<Combo BindDataset="GDS_Services" CodeColumn="CODE_NM" Column="Diff" DataColumn="CODE" Font="Tahoma,12" Height="32" Id="com_services" ImeMode="none" InnerDataset="GDS_Services_Combo" Left="192" TabOrder="23" Top="400" Width="128"></Combo>
+		<Static Height="24" Id="Static9" Left="196" TabOrder="24" Text="구분" Top="385" Width="96"></Static>
 	</Form>
 	<Script><![CDATA[
 function Lookup_OnLoadCompleted(obj) {
@@ -133,46 +131,6 @@ function Button0_OnClick(obj)
 	//alert("dialog : return ="+ret);
 }
 
-function Button1_OnClick(obj)
-{
-	go("Services::Services_Change.xml");
-}
-
-function btn_save_OnClick(obj)
-{
-	
-
-	/*for (var i=0; i<GDS_Services.GetRowCount(); i++) {
-		if (GDS_Services.GetColumn(i,"FLAG") == "I") {
-			GDS_Services.ADDRow();
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"p_id",GDS_Services.GetLastRow()+1);
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"p_name",GDS_Services.GetColumn(i, "p_name"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"p_trouble",GDS_Services.GetColumn(i, "p_trouble));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"addr",GDS_Services.GetColumn(i, "addr"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"day",GDS_Services.GetColumn(i, "day"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"name",GDS_Services.GetColumn(i, "name"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"number",GDS_Services.GetColumn(i, "number"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(),"Diff",GDS_Services.GetColumn(i, "Diff"));
-			GDS_Services.SetColumn(GDS_Services.GetLastRow(), "NEW_YN", "Y");
-			
-		} else if (GDS_Services.GetColumn(i, "FLAG") == "U") {
-			GDS_Services.SetColumn(GDS_Services.FindRow("p_id",GDS_Services.GetColumn(i, "p_id")),"p_name",GDS_Services.GetColumn(i, "p_id"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("p_trouble",GDS_Services.GetColumn(i, "p_id")),"p_trouble",GDS_Services.GetColumn(i, "p_id"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("addr",GDS_Services.GetColumn(i, "p_id")),"addr",GDS_Services.GetColumn(i,"addr"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("day",GDS_Services.GetColumn(i, "p_id")),"day",GDS_Services.GetColumn(i,"day"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("name",GDS_Services.GetColumn(i,"p_id")),"name",GDS_Services.GetColumn(i,"name"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("number",GDS_Services.GetColumn(i,"p_id")),"number",GDS_Services.GetColumn(i,"number"));
-			GDS_Services.SetColumn(GDS_Services.FindRow("Diff",GDS_Services.GetColumn(i,"p_id")),"Diff",GDS_Services.GetColumn(i,"Diff"));
-			
-		} else if (GDS_Services.getColumn(i, "FLAG") == "D") {
-			GDS_COMPANY.DeleteRow(GDS_Services.FindRow("p_id",GDS_Services.getColumn(i,"p_id")));
-			
-		}
-	}
-	btn_Lookup():
-	*/		
-}
-
 function btn_service_OnClick(obj)
 {
 	var strpid_lastindex = GDS_Services.GetColumn(GDS_Services.lastrow,"P_ID");
@@ -189,10 +147,16 @@ function btn_service_OnClick(obj)
 	//GDS_Services.SetColumn(GDS_Services.row,"day",Calendar0.Text);
 	GDS_Services.SetColumn(GDS_Services.Row,"name",edit_name.Text);
 	GDS_Services.SetColumn(GDS_Services.Row,"number",edit_number.Text);
-	GDS_Services.SetColumn(GDS_Services.Row,"NEW_YN","Y");
 	GDS_Services.Setcolumn(GDS_Services.Row,"Diff",com_services.Value);
-	
+	GDS_Services.SetColumn(GDS_Services.Row,"NEW_YN","Y");
+		
 	btn_Lookup();
 }	
+
+function btn_Lookup_people(obj)
+
+{
+	go("Services::Add");	
+	}
 ]]></Script>
 </Window>
