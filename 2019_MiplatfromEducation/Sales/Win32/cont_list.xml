@@ -2,6 +2,7 @@
 <Window>
 	<Form Height="543" Id="form" Left="8" OnLoadCompleted="contList_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
 		<Datasets>
+			<Dataset DataSetType="Dataset" Id="COPY_004"></Dataset>
 			<Dataset DataSetType="Dataset" Id="COPY_CONTRACT">
 				<Contents>
 					<colinfo id="BIZ_ID" size="256" summ="default" type="STRING"/>
@@ -17,28 +18,24 @@
 					<colinfo id="CT_COST" size="256" summ="default" type="STRING"/>
 					<colinfo id="CT_HOPE_NO" size="256" summ="default" type="STRING"/>
 					<colinfo id="CT_DATE" size="256" summ="default" type="STRING"/>
-					<colinfo id="CT_STATE" size="256" summ="default" type="STRING"/>
+					<colinfo id="CT_TYPE" size="256" summ="default" type="STRING"/>
 					<colinfo id="CT_ID" size="256" summ="default" type="STRING"/>
 				</Contents>
 			</Dataset>
-			<Dataset DataSetType="Dataset" Id="COPY_CONT_CLASS">
-				<Contents>
-					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
-					<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
-				</Contents>
-			</Dataset>
+			<Dataset DataSetType="Dataset" Id="COPY_PRODUCT"></Dataset>
+			<Dataset DataSetType="Dataset" Id="COPY_COMPANY"></Dataset>
 		</Datasets>
 		<Static Align="Center" BKColor="cornsilk" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="83" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="1" Top="5" Width="782"></Static>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="static00" Left="31" TabOrder="3" Text="법인명" Top="19" Width="49"></Static>
-		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Font="Tahoma,11" Height="32" Id="search_company" InnerDataset="GDS_COMPANY" Left="80" TabOrder="2" Top="16" Width="120"></Combo>
+		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Font="Tahoma,11" Height="32" Id="search_company" InnerDataset="COPY_COMPANY" Left="80" TabOrder="3" Top="16" Width="120"></Combo>
 		<Button Font="Tahoma,11,Bold" Height="29" Id="Btn_reset" Left="712" OnClick="Btn_reset_OnClick" TabOrder="4" Text="전체&#32;검색" Top="16" Width="64"></Button>
 		<Static Align="Center" BKColor="whitesmoke" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="8" TabOrder="5" Top="368" Width="780"></Static>
-		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Font="Tahoma,11" Height="32" Id="search_contractST" InnerDataset="GDS_CONTRACT_CLASS" Left="496" TabOrder="6" Top="16" Width="120"></Combo>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Font="Tahoma,11" Height="32" Id="search_contractST" InnerDataset="GDS_004" Left="512" TabOrder="6" Top="16" Width="120"></Combo>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static3" Left="24" TabOrder="7" Text="고객&#32;성명" Top="408" Width="56"></Static>
 		<Edit BindDataset="COPY_CONTRACT" Column="CU_NM" Height="34" Id="input_name" Left="88" TabOrder="8" Top="406" Width="121"></Edit>
-		<Combo CodeColumn="PD_ID" DataColumn="PD_NM" Font="Tahoma,11" Height="32" Id="search_phone" InnerDataset="GDS_PRODUCT" Left="296" TabOrder="9" Top="16" Width="120"></Combo>
+		<Combo CodeColumn="PD_ID" DataColumn="PD_NM" Font="Tahoma,11" Height="32" Id="search_phone" InnerDataset="COPY_PRODUCT" Left="296" TabOrder="9" Top="16" Width="120"></Combo>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static4" Left="224" TabOrder="10" Text="전화번호" Top="409" Width="56"></Static>
-		<Static Font="Tahoma,11,Bold" Height="21" Id="Static1" Left="431" TabOrder="11" Text="계약&#32;구분" Top="19" Width="57"></Static>
+		<Static Font="Tahoma,11,Bold" Height="21" Id="Static1" Left="439" TabOrder="11" Text="계약&#32;구분" Top="19" Width="57"></Static>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static0" Left="215" TabOrder="12" Text="휴대폰&#32;기종" Top="19" Width="73"></Static>
 		<Button BKColor="whitesmoke" Font="Tahoma,11,Bold" Height="29" Id="Btn_search" Left="712" OnClick="Btn_search_OnClick" TabOrder="13" Text="조건&#32;검색" Top="48" Width="64"></Button>
 		<Button BKColor="cornsilk" Font="Tahoma,11,Bold" Height="29" Id="Btn_update" Left="712" OnClick="Btn_update_OnClick" TabOrder="14" Text="수정" Top="488" Width="64"></Button>
@@ -51,13 +48,13 @@
 		<Edit BindDataset="COPY_CONTRACT" Column="CT_COST" Height="34" Id="input_cost" Left="288" TabOrder="22" Top="446" Width="121"></Edit>
 		<Edit BindDataset="COPY_CONTRACT" Column="CT_HOPE_NO" Height="32" Id="input_hopeNB" Left="488" TabOrder="21" Top="448" Width="121"></Edit>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static9" Left="424" TabOrder="23" Text="희망번호" Top="449" Width="52"></Static>
-		<Combo BindDataset="COPY_CONTRACT" CodeColumn="CODE" Column="CT_STATE" DataColumn="CODE_NM" Font="Tahoma,11" Height="32" Id="input_contractST" ImeMode="none" InnerDataset="COPY_CONT_CLASS" Left="488" TabOrder="27" Top="488" Width="121"></Combo>
+		<Combo BindDataset="COPY_CONTRACT" CodeColumn="CODE" Column="CT_TYPE" DataColumn="CODE_NM" Font="Tahoma,11" Height="32" Id="input_contractST" ImeMode="none" InnerDataset="COPY_004" Left="488" TabOrder="27" Top="488" Width="121"></Combo>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static10" Left="420" TabOrder="29" Text="계약&#32;구분" Top="489" Width="56"></Static>
-		<Edit BindDataset="COPY_CONTRACT" Column="CT_DATE" Height="34" Id="input_contDT" Left="288" TabOrder="28" Top="486" Width="121"></Edit>
+		<Calendar BindDataset="COPY_CONTRACT" Column="CT_DATE" Height="34" Id="input_contDT" Left="288" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="28" Top="486" Width="121"></Calendar>
 		<Static Font="Tahoma,11,Bold" Height="23" Id="Static11" Left="250" TabOrder="26" Text="비용" Top="449" Width="24"></Static>
 		<Edit BindDataset="COPY_CONTRACT" Column="BIZ_NM" Height="34" Id="input_company" Left="88" TabOrder="25" Top="486" Width="121"></Edit>
 		<Static Font="Tahoma,11,Bold" Height="21" Id="Static12" Left="40" TabOrder="24" Text="법인명" Top="489" Width="40"></Static>
-		<Grid AutoFit="TRUE" BindDataset="GDS_CONTRACT" BkColor2="default" BoldHead="true" Bottom="368" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="280" Id="contract_grid" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="contract_grid_OnCellClick" Right="788" TabOrder="30" TabStop="true" Top="88" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="780">
+		<Grid AutoFit="TRUE" BindDataset="GDS_CONTRACT" BkColor2="default" BoldHead="true" Bottom="216" Enable="true" EndLineColor="default" Font="Tahoma,11" Height="128" Id="contract_grid" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" OnCellClick="contract_grid_OnCellClick" Right="792" TabOrder="30" TabStop="true" Top="88" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -72,7 +69,7 @@
 					</columns>
 					<head>
 						<cell col="0" display="text" text="법인명"/>
-						<cell col="1" display="text" text="고객&#32;성명"/>
+						<cell col="1" display="text" text="고객&#32;성함"/>
 						<cell col="2" display="text" text="희망번호"/>
 						<cell col="3" display="text" text="계약&#32;기계"/>
 						<cell col="4" display="text" text="비용"/>
@@ -87,20 +84,86 @@
 						<cell col="3" colid="PD_NM" display="text"/>
 						<cell col="4" colid="CT_COST" display="text"/>
 						<cell col="5" colid="CT_DATE" display="text"/>
-						<cell col="6" colid="CT_STATE" combocol="CODE" combodataset="GDS_CONTRACT_CLASS" combotext="CODE_NM" display="combo"/>
+						<cell col="6" colid="CT_TYPE" combocol="CODE" combodataset="GDS_004" combotext="CODE_NM" display="combo"/>
 						<cell col="7" colid="CT_ID" display="text"/>
 					</body>
 				</format>
 			</contents>
 		</Grid>
-		<Button BKColor="cornsilk" Font="Tahoma,11,Bold" Height="29" Id="Btn_delete" Left="712" OnClick="Btn_delete_OnClick" TabOrder="31" Text="삭제" Top="448" Width="64"></Button>
+		<Grid BindDataset="COPY_CONTRACT" BkColor2="default" BoldHead="true" Bottom="366" Enable="true" EndLineColor="default" Height="146" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="default" Right="789" TabOrder="31" TabStop="true" Top="220" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="781">
+			<contents>
+				<columns>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+					<col width="80"/>
+				</columns>
+				<head>
+					<cell col="0" display="text" text="BIZ_ID"/>
+					<cell col="1" display="text" text="BIZ_NM"/>
+					<cell col="2" display="text" text="CU_ID"/>
+					<cell col="3" display="text" text="CU_NM"/>
+					<cell col="4" display="text" text="CU_TYPE"/>
+					<cell col="5" display="text" text="CU_CALL_NO"/>
+					<cell col="6" display="text" text="CU_HP_NO"/>
+					<cell col="7" display="text" text="CU_ADDR"/>
+					<cell col="8" display="text" text="PD_ID"/>
+					<cell col="9" display="text" text="PD_NM"/>
+					<cell col="10" display="text" text="CT_COST"/>
+					<cell col="11" display="text" text="CT_HOPE_NO"/>
+					<cell col="12" display="text" text="CT_DATE"/>
+					<cell col="13" display="text" text="CT_TYPE"/>
+					<cell col="14" display="text" text="CT_ID"/>
+				</head>
+				<body>
+					<cell col="0" colid="BIZ_ID" display="text"/>
+					<cell col="1" colid="BIZ_NM" display="text"/>
+					<cell col="2" colid="CU_ID" display="text"/>
+					<cell col="3" colid="CU_NM" display="text"/>
+					<cell col="4" colid="CU_TYPE" display="text"/>
+					<cell col="5" colid="CU_CALL_NO" display="text"/>
+					<cell col="6" colid="CU_HP_NO" display="text"/>
+					<cell col="7" colid="CU_ADDR" display="text"/>
+					<cell col="8" colid="PD_ID" display="text"/>
+					<cell col="9" colid="PD_NM" display="text"/>
+					<cell col="10" colid="CT_COST" display="text"/>
+					<cell col="11" colid="CT_HOPE_NO" display="text"/>
+					<cell col="12" colid="CT_DATE" display="text"/>
+					<cell col="13" colid="CT_TYPE" display="text"/>
+					<cell col="14" colid="CT_ID" display="text"/>
+				</body>
+			</contents>
+		</Grid>
 	</Form>
 	<Script><![CDATA[
 function contList_OnLoadCompleted(obj)
 {
 
-	COPY_CONT_CLASS.Copy("GDS_CONTRACT_CLASS");	
-	COPY_CONT_CLASS.Filter("CODE!=''");
+	COPY_004.Copy("GDS_004");	
+	COPY_004.Filter("CODE!=''");
+	
+	COPY_COMPANY.Copy("GDS_COMPANY");
+	COPY_PRODUCT.Copy("GDS_PRODUCT");
+	
+	COPY_COMPANY.InsertRow(0);
+	COPY_COMPANY.SetColumn(0, "BIZ_ID", "");
+	COPY_COMPANY.SetColumn(0, "BIZ_NM", "ALL");
+	
+	COPY_PRODUCT.InsertRow(0);
+	COPY_PRODUCT.SetColumn(0, "PD_ID", "");
+	COPY_PRODUCT.SetColumn(0, "PD_NM", "ALL");
+	
 }
 
 
@@ -115,8 +178,15 @@ function Btn_reset_OnClick(obj)
 function contract_grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
 {		
 
-	//  선택한 index 가지고 오기
+	//  선택한 index 가지고  search_company기
 	var rowindex= nRow;
+	
+	var inputdate1 = GDS_CONTRACT.GetColumn(rowindex, "CT_DATE");
+	
+	var inputdate2 = inputdate1.substr(0, 4);
+	var inputdate3 = inputdate1.substr(5, 2);
+	var inputdate4 = inputdate1.substr(8);
+	var Prodate = inputdate2 + inputdate3 + inputdate4;
 	
 	// 해당 row 값 담기
 	var bizid = GDS_CONTRACT.GetColumn(rowindex, "BIZ_ID");
@@ -131,8 +201,8 @@ function contract_grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
 	var pdnm = GDS_CONTRACT.GetColumn(rowindex, "PD_NM");
 	var ctcost = GDS_CONTRACT.GetColumn(rowindex, "CT_COST");
 	var cthopeno = GDS_CONTRACT.GetColumn(rowindex, "CT_HOPE_NO");
-	var ctdate = GDS_CONTRACT.GetColumn(rowindex, "CT_DATE");
-	var ctstate = GDS_CONTRACT.GetColumn(rowindex, "CT_STATE");
+	var ctdate = Prodate;
+	var cttype = GDS_CONTRACT.GetColumn(rowindex, "CT_TYPE");
 	var ctid = GDS_CONTRACT.GetColumn(rowindex, "CT_ID");
 	var newyn = GDS_CONTRACT.GetColumn(rowindex, "NEW_YN");
 	
@@ -158,7 +228,7 @@ function contract_grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
 		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_COST", ctcost);
 		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_HOPE_NO", cthopeno);
 		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_DATE", ctdate);
-		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_STATE", ctstate);
+		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_TYPE", cttype);
 		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "CT_ID", ctid);
 		COPY_CONTRACT.SetColumn(COPY_CONTRACT.row, "NEW_YN", newyn);
 	} else {	// 있을 경우
@@ -178,23 +248,30 @@ function contract_grid_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
 		COPY_CONTRACT.SetColumn(indextemp, "CT_COST", ctcost);
 		COPY_CONTRACT.SetColumn(indextemp, "CT_HOPE_NO", cthopeno);
 		COPY_CONTRACT.SetColumn(indextemp, "CT_DATE", ctdate);
-		COPY_CONTRACT.SetColumn(indextemp, "CT_STATE", ctstate);
+		COPY_CONTRACT.SetColumn(indextemp, "CT_TYPE", cttype);
 		COPY_CONTRACT.SetColumn(indextemp, "CT_ID", ctid);
 		COPY_CONTRACT.SetColumn(indextemp, "NEW_YN", newyn);
 		
 		COPY_CONTRACT.row = indextemp;
 
-	} 
+	}
 	
 }
-
-
 
 // 정보 입력할 때
 function Btn_update_OnClick(obj)
 {
 	for (var i=0; i<COPY_CONTRACT.GetRowCount(); i++) {
+	
+		var inputdate1 = COPY_CONTRACT.GetColumn(i, "CT_DATE");
+	
+		var inputdate2 = inputdate1.substr(0, 4);
+		var inputdate3 = inputdate1.substr(4, 2);
+		var inputdate4 = inputdate1.substr(6);
 		
+		
+		var Prodate = inputdate2 +"-"+ inputdate3 +"-"+ inputdate4;
+
 		// for문 돌려서 index마다 값 변수 넣고
 		var bizid = COPY_CONTRACT.GetColumn(i, "BIZ_ID");
 		var biznm = COPY_CONTRACT.GetColumn(i, "BIZ_NM");
@@ -208,8 +285,8 @@ function Btn_update_OnClick(obj)
 		var pdnm = COPY_CONTRACT.GetColumn(i, "PD_NM");
 		var ctcost = COPY_CONTRACT.GetColumn(i, "CT_COST");
 		var cthopeno = COPY_CONTRACT.GetColumn(i, "CT_HOPE_NO");
-		var ctdate = COPY_CONTRACT.GetColumn(i, "CT_DATE");
-		var ctstate = COPY_CONTRACT.GetColumn(i, "CT_STATE");
+		var ctdate = Prodate;
+		var cttype = COPY_CONTRACT.GetColumn(i, "CT_TYPE");
 		var ctid = COPY_CONTRACT.GetColumn(i, "CT_ID");
 		var newyn = COPY_CONTRACT.GetColumn(i, "NEW_YN");
 		
@@ -230,12 +307,15 @@ function Btn_update_OnClick(obj)
 		GDS_CONTRACT.SetColumn(indextemp, "CT_COST", ctcost);
 		GDS_CONTRACT.SetColumn(indextemp, "CT_HOPE_NO", cthopeno);
 		GDS_CONTRACT.SetColumn(indextemp, "CT_DATE", ctdate);
-		GDS_CONTRACT.SetColumn(indextemp, "CT_STATE", ctstate);
+		GDS_CONTRACT.SetColumn(indextemp, "CT_TYPE", cttype);
 		GDS_CONTRACT.SetColumn(indextemp, "NEW_YN", newyn);
 
 	}
 	
-	// edit 초기화
+	// edit 초기화해서 아무것도 없게 만들기
+	copy_contract.Reset();
+	
+	/*
 	search_company.Text = "";
 	search_phone.Text = "";
 	search_contractST.Text = "";
@@ -250,11 +330,16 @@ function Btn_update_OnClick(obj)
 	input_company.Text = "";
 	input_contDT.Text = "";
 	input_contractST.Text = "";
+	*/
 	
+	// search 클릭
 	Btn_search_OnClick();
+	// 혹은 페이지 주소 주기
+	//Go("Sales::cont_list.xml");
 	
 	
 }
+
 function Btn_delete_OnClick(obj)
 {
 	//현재 row 값
@@ -269,6 +354,7 @@ function Btn_search_OnClick(obj)
 {
 	
 	var pFilter = "";
+
 	
 
 	if (length(search_company.Value) != 0) {
@@ -285,7 +371,7 @@ function Btn_search_OnClick(obj)
 	if (length(search_contractST.Value) != 0) {
 		if (length(pFilter) !=0) pFilter += " && ";		
 	
-		pFilter += "CT_STATE=="+quote(search_contractST.value);
+		pFilter += "CT_TYPE=="+quote(search_contractST.value);
 	}
 
 	GDS_CONTRACT.Filter(pFilter);

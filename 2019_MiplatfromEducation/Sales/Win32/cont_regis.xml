@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window>
-	<Form Font="맑은&#32;고딕,10" Height="543" Id="form" Left="8" OnLoadCompleted="contregis_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+	<Form Font="맑은&#32;고딕,10" Height="528" Id="form" Left="8" OnLoadCompleted="contregis_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="784" WorkArea="true">
 		<Datasets>
 			<Dataset DataSetType="Dataset" Id="GET_CUSTOMER">
 				<Contents>
@@ -24,7 +24,7 @@
 					</record>
 				</Contents>
 			</Dataset>
-			<Dataset DataSetType="Dataset" Id="COPY_CONT_CLASS">
+			<Dataset DataSetType="Dataset" Id="COPY_004">
 				<Contents>
 					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
 					<colinfo id="CODE_NM" size="256" summ="default" type="STRING"/>
@@ -32,32 +32,31 @@
 			</Dataset>
 		</Datasets>
 		<Static Align="Center" BKColor="INFOBK" Font="맑은&#32;고딕,14,Bold" Height="521" Id="Static13" TabOrder="1" Width="780"></Static>
-		<Static Font="Tahoma,24,Bold" Height="46" Id="Static14" Left="27" TabOrder="2" Text="신규&#32;계약서" Top="10" Width="141"></Static>
+		<Static Font="Tahoma,24,Bold" Height="38" Id="Static14" Left="19" TabOrder="2" Text="신규&#32;계약서" Top="2" Width="141"></Static>
 		<Button BKColor="whitesmoke" Font="Tahoma,11,Bold" Height="29" Id="Button0" Left="704" OnClick="Btn_register_OnClick" TabOrder="3" Text="등록" Top="480" Width="64"></Button>
-		<Shape Bottom="73" Height="16" Id="Shape1" Left="8" Right="776" TabOrder="4" Top="57" Width="768"></Shape>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static0" Left="62" TabOrder="5" Text="법인명" Top="166" Width="51"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static" Left="364" TabOrder="6" Text="서비스" Top="166" Width="51"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static1" Left="62" TabOrder="7" Text="고객&#32;성명" Top="226" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static4" Left="364" TabOrder="8" Text="주소지" Top="226" Width="51"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static2" Left="62" TabOrder="9" Text="전화번호" Top="286" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static3" Left="364" TabOrder="10" Text="휴대전화&#32;번호" Top="286" Width="88"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static5" Left="62" TabOrder="11" Text="계약&#32;기계" Top="346" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static6" Left="364" TabOrder="12" Text="비용" Top="346" Width="32"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static7" Left="62" TabOrder="13" Text="희망&#32;번호" Top="406" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static8" Left="364" TabOrder="14" Text="계약일" Top="406" Width="67"></Static>
-		<Static Font="Tahoma,12,Bold" Height="23" Id="Static9" Left="62" TabOrder="15" Text="계약&#32;구분" Top="466" Width="67"></Static>
-		<Combo BindDataset="GET_CUSTOMER" CodeColumn="BIZ_ID" Column="BIZ_ID" DataColumn="BIZ_NM" Font="맑은&#32;고딕&#32;Semilight,10" Height="32" Id="cont_company" InnerDataset="GDS_COMPANY" Left="162" TabOrder="16" Top="166" Width="140"></Combo>
-		<Combo BindDataset="GET_CUSTOMER" CodeColumn="CODE" Column="CU_TYPE" DataColumn="CODE_NM" Font="맑은&#32;고딕&#32;Semilight,10" Height="32" Id="cont_type" InnerDataset="GDS_001" Left="464" TabOrder="17" Top="166" Width="140"></Combo>
-		<Edit BindDataset="GET_CUSTOMER" Column="CU_NM" Font="맑은&#32;고딕,10" Height="32" Id="cont_name" Left="162" Readonly="TRUE" TabOrder="18" Top="226" Width="140"></Edit>
-		<Edit BindDataset="GET_CUSTOMER" Column="CU_ADDR" Font="맑은&#32;고딕,10" Height="32" Id="cont_addr" Left="464" Readonly="TRUE" TabOrder="19" Top="226" Width="140"></Edit>
-		<Edit BindDataset="GET_CUSTOMER" Column="CU_CALL_NO" Font="맑은&#32;고딕,10" Height="32" Id="cont_call_no" Left="162" Readonly="TRUE" TabOrder="20" Top="286" Width="140"></Edit>
-		<Edit BindDataset="GET_CUSTOMER" Column="CU_HP_NO" Font="맑은&#32;고딕,10" Height="32" Id="cont_hp_no" Left="464" Readonly="TRUE" TabOrder="21" Top="286" Width="140"></Edit>
-		<Combo CodeColumn="PD_ID" DataColumn="PD_NM" Height="32" Id="cont_product" InnerDataset="GDS_PRODUCT" Left="162" TabOrder="22" Top="346" Width="140"></Combo>
-		<Edit Height="32" Id="cont_cost" Left="464" TabOrder="23" Top="346" Width="140"></Edit>
-		<Edit Height="32" Id="cont_hope_no" Left="162" TabOrder="24" Top="406" Width="140"></Edit>
-		<Calendar Height="32" Id="cont_Date" Left="464" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="25" Top="406" Width="140"></Calendar>
-		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="32" Id="cont_state" InnerDataset="COPY_CONT_CLASS" Left="162" TabOrder="26" Top="466" Width="140"></Combo>
-		<Grid AutoFit="TRUE" BindDataset="GDS_CUSTOMER" BkColor2="default" BoldHead="true" Bottom="152" Enable="true" EndLineColor="default" Height="80" Id="cust_gridBox" InputPanel="FALSE" Left="56" LineColor="default" MinWidth="100" OnCellClick="cust_gridBox_OnCellClick" Right="728" TabOrder="27" TabStop="true" Top="72" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="672">
+		<Shape Bottom="49" Height="16" Id="Shape1" Left="8" Right="776" TabOrder="4" Top="33" Width="768"></Shape>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static0" Left="64" TabOrder="5" Text="법인명" Top="288" Width="51"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static" Left="364" TabOrder="6" Text="서비스" Top="286" Width="51"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static1" Left="62" TabOrder="7" Text="고객&#32;성명" Top="322" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static4" Left="364" TabOrder="8" Text="주소지" Top="322" Width="51"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static2" Left="62" TabOrder="9" Text="전화번호" Top="358" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static3" Left="364" TabOrder="10" Text="휴대전화&#32;번호" Top="358" Width="88"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static5" Left="62" TabOrder="11" Text="계약&#32;기계" Top="394" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static6" Left="364" TabOrder="12" Text="비용" Top="394" Width="32"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static7" Left="62" TabOrder="13" Text="희망&#32;번호" Top="430" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static8" Left="364" TabOrder="14" Text="계약일" Top="430" Width="67"></Static>
+		<Combo BindDataset="GET_CUSTOMER" CodeColumn="BIZ_ID" Column="BIZ_ID" DataColumn="BIZ_NM" Font="맑은&#32;고딕&#32;Semilight,10" Height="32" Id="cont_company" InnerDataset="GDS_COMPANY" Left="162" TabOrder="15" Top="286" Width="140"></Combo>
+		<Combo BindDataset="GET_CUSTOMER" CodeColumn="CODE" Column="CU_TYPE" DataColumn="CODE_NM" Font="맑은&#32;고딕&#32;Semilight,10" Height="32" Id="cont_type" InnerDataset="GDS_001" Left="464" TabOrder="16" Top="286" Width="140"></Combo>
+		<Edit BindDataset="GET_CUSTOMER" Column="CU_NM" Font="맑은&#32;고딕,10" Height="32" Id="cont_name" Left="162" Readonly="TRUE" TabOrder="17" Top="322" Width="140"></Edit>
+		<Edit BindDataset="GET_CUSTOMER" Column="CU_ADDR" Font="맑은&#32;고딕,10" Height="32" Id="cont_addr" Left="464" Readonly="TRUE" TabOrder="18" Top="322" Width="140"></Edit>
+		<Edit BindDataset="GET_CUSTOMER" Column="CU_CALL_NO" Font="맑은&#32;고딕,10" Height="32" Id="cont_call_no" Left="162" Readonly="TRUE" TabOrder="19" Top="358" Width="140"></Edit>
+		<Edit BindDataset="GET_CUSTOMER" Column="CU_HP_NO" Font="맑은&#32;고딕,10" Height="32" Id="cont_hp_no" Left="464" Readonly="TRUE" TabOrder="20" Top="358" Width="140"></Edit>
+		<Combo CodeColumn="PD_ID" DataColumn="PD_NM" Height="32" Id="cont_product" InnerDataset="GDS_PRODUCT" Left="162" TabOrder="21" Top="394" Width="140"></Combo>
+		<Edit Height="32" Id="cont_cost" Left="464" TabOrder="22" Top="394" Width="140"></Edit>
+		<Edit Height="32" Id="cont_hope_no" Left="162" TabOrder="23" Top="430" Width="140"></Edit>
+		<Calendar Height="32" Id="cont_Date" Left="464" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="24" Top="430" Width="140"></Calendar>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="32" Id="cont_state" InnerDataset="COPY_004" Left="162" TabOrder="25" Top="466" Width="140"></Combo>
+		<Grid AutoFit="TRUE" BindDataset="GDS_CUSTOMER" BkColor2="default" BoldHead="true" Bottom="248" Enable="true" EndLineColor="default" Height="112" Id="cust_gridBox" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" OnCellClick="cust_gridBox_OnCellClick" Right="760" TabOrder="26" TabStop="true" Top="136" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="744">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -84,7 +83,7 @@
 						<cell col="0" colid="BIZ_ID" combocol="BIZ_ID" combodataset="GDS_COMPANY" combotext="BIZ_NM" display="combo"/>
 						<cell col="1" colid="CU_ID" display="text"/>
 						<cell col="2" colid="CU_NM" display="text"/>
-						<cell col="3" colid="CU_TYPE" combocol="CODE" combodataset="GDS_003" combotext="CODE_NM" display="combo"/>
+						<cell col="3" colid="CU_TYPE" combocol="CODE" combodataset="GDS_002" combotext="CODE_NM" display="combo"/>
 						<cell col="4" colid="CU_CALL_NO" display="text"/>
 						<cell col="5" colid="CU_HP_NO" display="text"/>
 						<cell col="6" colid="CU_ADDR" display="text"/>
@@ -93,12 +92,21 @@
 				</format>
 			</contents>
 		</Grid>
+		<Combo CodeColumn="CODE" DataColumn="CODE_NM" Height="32" Id="search_type" InnerDataset="GDS_002" Left="376" TabOrder="27" Top="64" Width="140"></Combo>
+		<Button BKColor="whitesmoke" Font="Tahoma,11,Bold" Height="29" Id="Btn_search" Left="688" OnClick="Btn_search_OnClick" TabOrder="29" Text="조건&#32;검색" Top="64" Width="64"></Button>
+		<Button Font="Tahoma,11,Bold" Height="29" Id="Btn_reset" Left="616" OnClick="Btn_reset_OnClick" TabOrder="28" Text="전체&#32;검색" Top="64" Width="64"></Button>
+		<Edit Font="맑은&#32;고딕,10" Height="32" Id="search_company" Left="128" TabOrder="30" ToolTipText="사업자&#32;번호" Top="48" Width="140"></Edit>
+		<Shape Bottom="129" Height="16" Id="Shape0" Left="8" Right="776" TabOrder="31" Top="113" Width="768"></Shape>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static10" Left="40" TabOrder="32" Text="사업자&#32;번호" Top="72" Width="88"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static9" Left="64" TabOrder="33" Text="계약&#32;구분" Top="464" Width="67"></Static>
+		<Static Font="Tahoma,12,Bold" Height="23" Id="Static11" Left="296" TabOrder="34" Text="고객&#32;분류" Top="72" Width="67"></Static>
+		<Combo CodeColumn="BIZ_ID" DataColumn="BIZ_NM" Height="32" Id="companycombo" InnerDataset="GDS_COMPANY" Left="128" TabOrder="35" Top="80" Width="140"></Combo>
 	</Form>
 	<Script><![CDATA[
 function contregis_OnLoadCompleted(obj)
 {
-	COPY_CONT_CLASS.Copy("GDS_CONTRACT_CLASS");	
-	COPY_CONT_CLASS.Filter("CODE!=''");
+	COPY_004.Copy("GDS_004");	
+	COPY_004.Filter("CODE!=''");
 }
 
 // 정보 입력할 때
@@ -143,7 +151,7 @@ function Btn_register_OnClick(obj)
 	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_COST", cont_cost.Text);
 	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_HOPE_NO", cont_hope_no.Text);
 	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_DATE", cont_date.Text);
-	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_STATE", cont_state.Value);
+	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_TYPE", cont_state.Value);
 	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "CT_ID", temp1);
 	GDS_CONTRACT.SetColumn(GDS_CONTRACT.row, "NEW_YN", "Y");
 	
@@ -177,5 +185,35 @@ function cust_gridBox_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
 
 }
 
-]]></Script>
+// 고객 선택 초기화
+function Btn_reset_OnClick(obj)
+{
+	GDS_CUSTOMER.UnFilter();
+}
+
+// 고객 선택 검색
+function Btn_search_OnClick(obj)
+{
+	
+	var pFilter = "";
+	
+
+	if (length(search_company.Text) != 0) {
+		
+		pFilter += "BIZ_ID=="+quote(search_company.Text);
+	}
+	
+	if (length(companycombo.value) != 0) {
+		
+		pFilter += "BIZ_ID=="+quote(companycombo.value);
+	}
+	
+	if (length(search_type.Value) != 0) {
+		if (length(pFilter) !=0) pFilter += " && ";
+	
+		pFilter += "CU_TYPE=="+quote(search_type.Value);
+	}
+
+	GDS_CUSTOMER.Filter(pFilter);
+}]]></Script>
 </Window>
