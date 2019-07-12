@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="form" Left="8" OnLoadCompleted="form_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PT"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PD"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Check">
+				<Contents>
+					<colinfo id="CHECK" size="256" summ="default" type="STRING"/>
+					<colinfo id="CENTER_TYPE" size="256" summ="default" type="STRING"/>
+					<record>
+						<CENTER_TYPE></CENTER_TYPE>
+						<CHECK></CHECK>
+					</record>
+					<record>
+						<CENTER_TYPE>AS지점</CENTER_TYPE>
+						<CHECK>Y</CHECK>
+					</record>
+					<record>
+						<CENTER_TYPE>판매점</CENTER_TYPE>
+						<CHECK>N</CHECK>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="8" ShadowColor="INACTIVECAPTION" TabOrder="4" Top="8" Width="782"></Static>
+		<Button Font="굴림,11,Bold" Height="40" Id="btn_search" Left="640" OnClick="btn_search_OnClick" TabOrder="3" Text="조&#32;회" Top="64" Width="104"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="10" TabOrder="5" Top="378" Width="780"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="16" TabOrder="6" Text="모델명" Top="508" Width="57"></Static>
+		<Edit BindDataset="ds_PT" Column="PT_MODEL" Height="32" Id="edit_id" Left="80" TabOrder="2" Top="500" Width="121"></Edit>
+		<Static Color="snow" Font="Tahoma,25" Height="48" Id="Static9" Left="608" TabOrder="7" Text="부&#32;&#32;품&#32;&#32;통&#32;&#32;계" Top="16" Width="264"></Static>
+		<Grid AutoFit="TRUE" BindDataset="ds_PT" BkColor2="default" BoldHead="true" Bottom="448" Enable="true" EndLineColor="default" Height="336" Id="grd_List" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" Right="792" TabOrder="8" TabStop="true" Top="112" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="센터구분"/>
+						<cell col="1" display="text" text="센터명"/>
+						<cell col="2" display="text" text="담당자"/>
+						<cell col="3" display="text" text="모델명"/>
+						<cell col="4" display="text" text="처리여부"/>
+						<cell col="5" display="text" text="등록날짜"/>
+					</head>
+					<body>
+						<cell col="0" colid="PT_CENTER_TYPE" combodataset="ds_PT" display="text"/>
+						<cell col="1" colid="PT_CENTER" combodataset="ds_PT" display="text"/>
+						<cell col="2" colid="PT_USER" combodataset="ds_PT" display="text"/>
+						<cell col="3" colid="PT_MODEL" combodataset="ds_PT" display="text"/>
+						<cell col="4" colid="PT_PROC" combodataset="ds_PT" display="text"/>
+						<cell col="5" colid="PT_DATE" combodataset="ds_PT" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="8" TabOrder="9" Text="센터구분" Top="24" Width="73"></Static>
+		<Combo CodeColumn="CENTER_TYPE" DataColumn="CENTER_TYPE" Height="24" Id="edit_center_type" INDEX="0" InnerDataset="ds_Check" Left="84" TabOrder="1" Top="18" Width="127"></Combo>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static4" Left="200" TabOrder="11" Text="처리구분" Top="508" Width="57"></Static>
+		<Edit BindDataset="ds_PT" Column="PT_PROC" Height="32" Id="Edit0" Left="264" TabOrder="10" Top="500" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="384" TabOrder="13" Text="등록일자" Top="508" Width="57"></Static>
+		<Edit BindDataset="ds_PT" Column="PT_DATE" Height="32" Id="Edit1" Left="448" TabOrder="12" Top="500" Width="121"></Edit>
+		<Edit BindDataset="ds_PT" Column="PT_CENTER_TYPE" Height="32" Id="Edit3" Left="80" TabOrder="14" Top="454" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static7" Left="16" TabOrder="15" Text="지점구분" Top="462" Width="57"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="200" TabOrder="17" Text="지점명" Top="462" Width="57"></Static>
+		<Edit BindDataset="ds_PT" Column="PT_CENTER" Height="32" Id="Edit4" Left="264" TabOrder="16" Top="454" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static12" Left="384" TabOrder="19" Text="담당자" Top="462" Width="57"></Static>
+		<Edit BindDataset="ds_PT" Column="PT_USER" Height="32" Id="Edit5" Left="448" TabOrder="18" Top="454" Width="121"></Edit>
+		<Button Color="red" Font="Tahoma,36,Bold" Height="69" Id="btn_print" Left="589" OnClick="btn_print_OnClick" TabOrder="20" Text="출&#32;&#32;&#32;력" Top="460" Width="190"></Button>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static0" Left="200" TabOrder="21" Text="센터명" Top="24" Width="73"></Static>
+		<Edit Height="29" Id="edit_center" Left="280" TabOrder="22" Top="16" Width="124"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="392" TabOrder="23" Text="담당자" Top="24" Width="73"></Static>
+		<Edit Height="29" Id="edit_user" Left="472" TabOrder="24" Top="16" Width="124"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static6" Left="8" TabOrder="26" Text="모델명" Top="72" Width="73"></Static>
+		<Combo CodeColumn="PD_ID" DataColumn="PD_ID" Height="24" Id="edit_model" INDEX="0" InnerDataset="ds_PD" Left="84" TabOrder="25" Top="66" Width="127"></Combo>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="208" TabOrder="27" Text="처리구분" Top="72" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static13" Left="399" TabOrder="28" Text="등록일자" Top="72" Width="73"></Static>
+		<Combo CodeColumn="CHECK" DataColumn="CHECK" Height="24" Id="edit_proc" INDEX="0" InnerDataset="ds_Check" Left="279" TabOrder="29" Top="66" Width="127"></Combo>
+		<Calendar Height="29" Id="edit_date" Left="472" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="30" Top="64" Width="126"></Calendar>
+	</Form>
+	<Script><![CDATA[
+function form_OnLoadCompleted(obj)
+{
+	ds_PT.Copy("GDS_PARTS_TOTAL");
+	
+	ds_PD.Copy("GDS_PRODUCT");
+	
+	
+	
+}
+
+function btn_search_OnClick(obj)
+{
+	ds_PT.Copy("GDS_PARTS_TOTAL");
+	
+	ds_PD.Copy("GDS_PRODUCT");
+	
+	
+	var pFilter = "";
+	
+	
+	
+	if (length(edit_center_type.Value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_CENTER_TYPE=="+quote(edit_center_type.Value);
+	}
+	
+	
+	if (length(edit_center.value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_CENTER=="+quote(edit_center.Text);
+	}
+	
+	if (length(edit_user.value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_USER=="+quote(edit_user.Text);
+	}
+		
+	if (length(edit_model.Value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_MODEL=="+quote(edit_model.Value);
+	}
+	
+	if (length(edit_proc.Value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_PROC=="+quote(edit_proc.Value);
+	}
+	
+	if (length(edit_date.Value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PT_DATE=="+quote(edit_date.Value);
+	}
+		
+	//alert(pFilter);
+	ds_PT.Filter(pFilter);
+	
+	
+}
+
+
+function btn_print_OnClick(obj)
+{
+	PrintScreen();
+
+
+}
+]]></Script>
+</Window>

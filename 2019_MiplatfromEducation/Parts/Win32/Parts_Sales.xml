@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="form" Left="8" OnLoadCompleted="form_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_PS" OnColumnChanged="ds_PS_OnColumnChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_Check">
+				<Contents>
+					<colinfo id="CHECK" size="256" summ="default" type="STRING"/>
+					<record>
+						<CHECK></CHECK>
+					</record>
+					<record>
+						<CHECK>Y</CHECK>
+					</record>
+					<record>
+						<CHECK>N</CHECK>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_PD"></Dataset>
+		</Datasets>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" Left="16" ShadowColor="INACTIVECAPTION" TabOrder="7" Top="16" Width="782"></Static>
+		<Button Font="굴림,11,Bold" Height="40" Id="btn_search" Left="592" OnClick="btn_search_OnClick" TabOrder="6" Text="조&#32;회" Top="72" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="18" TabOrder="8" Top="386" Width="780"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="24" TabOrder="9" Text="센터명" Top="400" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_CENTER" Height="32" Id="edit_center" Left="88" TabOrder="3" Top="392" Width="121"></Edit>
+		<Button Font="Tahoma,11" Height="32" Id="btn_insert" Left="448" OnClick="btn_insert_OnClick" TabOrder="2" Text="추&#32;&#32;가" Top="392" Width="80"></Button>
+		<Button Font="Tahoma,11" Height="32" Id="btn_delete" Left="536" OnClick="btn_delete_OnClick" TabOrder="1" Text="삭&#32;&#32;제" Top="392" Width="80"></Button>
+		<Static Color="snow" Font="굴림,24,Bold" Height="48" Id="Static9" Left="600" TabOrder="10" Text="판&#32;&#32;&#32;매&#32;&#32;&#32;처" Top="32" Width="272"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static4" Left="24" TabOrder="11" Text="모델명" Top="440" Width="57"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static6" Left="23" TabOrder="12" Text="처리여부" Top="480" Width="57"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static7" Left="23" TabOrder="13" Text="날&#32;&#32;&#32;짜" Top="520" Width="57"></Static>
+		<Grid AutoFit="TRUE" BindDataset="ds_PS" BkColor2="default" BoldHead="true" Bottom="387" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="800" TabOrder="14" TabStop="true" Top="120" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="35"/>
+						<col width="30"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" text="번호"/>
+						<cell col="2" display="text" text="센터명"/>
+						<cell col="3" display="text" text="담당자"/>
+						<cell col="4" display="text" text="모델명"/>
+						<cell col="5" display="text" text="고객명"/>
+						<cell col="6" display="text" text="처리여부"/>
+						<cell col="7" display="text" text="등록일"/>
+					</head>
+					<body>
+						<cell col="0" colid="FLAG" combodataset="ds_PS" display="text"/>
+						<cell col="1" colid="PS_IDX" combodataset="ds_PS" display="text"/>
+						<cell col="2" colid="PS_CENTER" combodataset="ds_PS" display="text"/>
+						<cell col="3" colid="PS_USER" combodataset="ds_PS" display="text"/>
+						<cell col="4" colid="PS_MODEL" combodataset="ds_PS" display="text"/>
+						<cell col="5" colid="PS_CU" combodataset="ds_PS" display="text"/>
+						<cell col="6" colid="PS_PROC" combodataset="ds_PS" display="text"/>
+						<cell col="7" colid="PS_DATE" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" TabOrder="15" Text="센터명" Top="32" Width="73"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="208" TabOrder="16" Text="담당자" Top="400" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_USER" Height="32" Id="edit_user" Left="272" TabOrder="4" Top="392" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="208" TabOrder="17" Text="고객명" Top="440" Width="57"></Static>
+		<Edit BindDataset="ds_PS" Column="PS_CU" Height="32" Id="edit_cu" Left="272" TabOrder="5" Top="432" Width="121"></Edit>
+		<Button Font="Tahoma,16,Bold" Height="52" Id="btn_change" Left="464" OnClick="btn_change_OnClick" TabOrder="18" Text="변경사항&#32;저장" Top="440" Width="133"></Button>
+		<Edit Height="29" Id="ps_center" Left="80" TabOrder="19" Top="24" Width="116"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static0" Left="184" TabOrder="20" Text="담당자" Top="32" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="368" TabOrder="21" Text="모델명" Top="32" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" TabOrder="22" Text="고객명" Top="80" Width="73"></Static>
+		<Edit Height="29" Id="ps_cu" Left="80" TabOrder="23" Top="74" Width="116"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static12" Left="192" TabOrder="24" Text="처리여부" Top="80" Width="73"></Static>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static13" Left="376" TabOrder="25" Text="등록날짜" Top="80" Width="73"></Static>
+		<Combo CodeColumn="CHECK" DataColumn="CHECK" Height="28" Id="ps_proc" InnerDataset="ds_Check" Left="264" TabOrder="26" Top="74" Width="118"></Combo>
+		<Calendar Height="27" Id="ps_date" Left="448" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="27" Top="76" Width="116"></Calendar>
+		<Edit Height="29" Id="ps_user" Left="264" TabOrder="28" Top="24" Width="116"></Edit>
+		<Combo BindDataset="ds_PS" CodeColumn="CHECK" Column="PS_PROC" DataColumn="CHECK" Height="28" Id="edit_proc" InnerDataset="ds_Check" Left="88" TabOrder="29" Top="472" Width="123"></Combo>
+		<Calendar BindDataset="ds_PS" Column="PS_DATE" Height="27" Id="edit_date" Left="88" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="30" Top="512" Width="123"></Calendar>
+		<Combo CodeColumn="PD_ID" DataColumn="PD_ID" Height="28" Id="ps_model" InnerDataset="ds_PD" Left="448" TabOrder="31" Top="26" Width="118"></Combo>
+		<Combo BindDataset="ds_PS" CodeColumn="PD_ID" Column="PS_MODEL" DataColumn="PD_ID" Height="28" Id="edit_model" InnerDataset="ds_PD" Left="88" TabOrder="32" Top="432" Width="123"></Combo>
+	</Form>
+	<Script><![CDATA[//form이 실행될때
+function form_OnLoadCompleted(obj)
+{
+	ds_PS.Copy("GDS_PARTS_SERVICE");
+	
+	ds_PS.AddColumn("FLAG");
+	
+	ds_PD.Copy("GDS_PRODUCT");
+	
+	
+	
+}
+
+//조회기능
+function btn_search_OnClick(obj)
+{
+	ds_PS.Copy("GDS_PARTS_SERVICE");
+	
+	ds_PS.AddColumn("FLAG");
+	
+	ds_PD.Copy("GDS_PRODUCT");
+	
+	
+	var pFilter = "";
+	
+	
+	if (length(ps_center.value) !=0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PS_CENTER=="+quote(ps_center.Text);
+	}
+	
+	if(length(ps_user.value) !=0) {
+		
+		if(length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PS_USER=="+quote(ps_user.Text);
+	}
+	
+	if(length(ps_model.value) !=0) {
+		
+		if(length(pFilter) !=0) pFilter += " && ";
+		 
+		pFilter += "PS_MODEL=="+quote(ps_model.Text);
+	}
+	
+	if(length(ps_cu.value) != 0) {
+	
+		if(length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PS_CU=="+quote(ps_cu.Text);
+	
+	}
+	
+	if(length(ps_proc.Value) !=0) {
+		
+		if(length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PS_PROC=="+quote(ps_proc.Value);
+	
+	}
+	
+	if(length(ps_date.Value) !=0) {
+	
+		if(length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PS_DATE=="+quote(ps_date.Value);
+	}
+	
+	//alert(pFilter);
+	
+	ds_PS.Filter(pFilter);
+	
+}
+
+//추가기능
+function btn_insert_OnClick(obj)
+{
+	ds_PS.AddRow();
+	
+	ds_PS.SetColumn(ds_PS.GetLastRow(), "FLAG", "I");
+	
+	edit_center.value = "";
+	
+	edit_user.value = "";
+	
+	edit_model.value = "";
+	
+	edit_cu.value = "";
+	
+	edit_proc.Index = 2;
+	
+	edit_date.Value = Today();
+	
+	
+}
+
+
+//삭제기능
+function btn_delete_OnClick(obj)
+{
+	if(ds_PS.GetColumn(grd_List.CurrentRow, "FLAG") == "I") {
+	
+		ds_PS.DeleteRow(grd_List.CurrentRow);
+		
+		return;
+	}
+	
+	ds_PS.SetColumn(grd_List.CurrentRow, "FLAG", "D");
+	
+}
+
+
+
+
+//변경사항 저장
+function btn_change_OnClick(obj)
+{
+	for(var i=0; i<ds_PS.GetRowCount(); i++) {
+	
+		if(ds_PS.GetColumn(i, "FLAG") == "I") {
+				
+		//처리여부가 Y이면 
+			if(edit_proc.Value == "Y") {
+				
+				//재고수량이 0이면 작업불가
+				if(GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK") == 0) {
+					alert("현재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value) == 0));
+					alert("재고가 없습니다. 담당부서 문의해주세요.");
+					return;
+				}
+			
+				//모델명가져옴
+				var model_id = GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_ID");
+				//모델명과 현재고 파악
+				alert("모델명 : " + model_id + " 현재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+				
+				//재고가 문자열로 되어있어서 number로 형변환해서 -1해주기 위한 변수
+				var changeStock = toNumber(GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+				changeStock  = changeStock - 1;
+				
+				//재고를 기존재고-1 한 변수값으로 대입
+				GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK", changeStock);
+				
+				alert("바뀐재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+			}
+		 
+			GDS_PARTS_SERVICE.AddRow();
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_IDX", GDS_PARTS_SERVICE.GetLastRow()+1);
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_CENTER", ds_PS.GetColumn(i, "PS_CENTER"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_USER", ds_PS.GetColumn(i, "PS_USER"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_MODEL", ds_PS.GetColumn(i, "PS_MODEL"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_CU", ds_PS.GetColumn(i, "PS_CU"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_PROC", ds_PS.GetColumn(i, "PS_PROC"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.GetLastRow(), "PS_DATE", ds_PS.GetColumn(i, "PS_DATE"));
+			
+			
+			
+			
+			//GDS_PARTS_TOTAL 데이터셋으로 값저장
+			GDS_PARTS_TOTAL.AddRow();
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_IDX", GDS_PARTS_TOTAL.GetLastRow()+1);
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_CENTER", ds_PS.GetColumn(i, "PS_CENTER"));
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_USER", ds_PS.GetColumn(i, "PS_USER"));
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_MODEL", ds_PS.GetColumn(i, "PS_MODEL"));
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_PROC", ds_PS.GetColumn(i, "PS_PROC"));
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_DATE", ds_PS.GetColumn(i, "PS_DATE"));
+			GDS_PARTS_TOTAL.SetColumn(GDS_PARTS_TOTAL.GetLastRow(), "PT_CENTER_TYPE", "판매점");
+			
+			
+			
+			
+		 }  else if(ds_PS.GetColumn(i, "FLAG") == "U") {
+		 
+		 
+			//처리여부가 Y이면 
+			if(edit_proc.Value == "Y") {
+				
+				//재고수량이 0이면 작업불가
+				if(GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK") == 0) {
+					alert("현재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value) == 0));
+					alert("재고가 없습니다. 담당부서 문의해주세요.");
+					return;
+				}
+			
+				//모델명가져옴
+				var model_id = GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_ID");
+				//모델명과 현재고 파악
+				alert("모델명 : " + model_id + " 현재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+				
+				//재고가 문자열로 되어있어서 number로 형변환해서 -1해주기 위한 변수
+				var changeStock = toNumber(GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+				changeStock  = changeStock - 1;
+				
+				//재고를 기존재고-1 한 변수값으로 대입
+				GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK", changeStock);
+				
+				alert("바뀐재고 : " + GDS_PRODUCT.GetColumn(GDS_PRODUCT.FindRow("PD_ID", edit_model.Value), "PD_STOCK"));
+			}
+			
+			
+		 
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_CENTER", ds_PS.GetColumn(i, "PS_CENTER"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_USER", ds_PS.GetColumn(i, "PS_USER"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_MODEL", ds_PS.GetColumn(i, "PS_MODEL"));
+			//GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_STOCK", 0);
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_CU", ds_PS.GetColumn(i, "PS_CU"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_PROC", ds_PS.GetColumn(i, "PS_PROC"));
+			GDS_PARTS_SERVICE.SetColumn(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")), "PS_DATE", ds_PS.GetColumn(i, "PS_DATE"));
+		 
+		 
+		 } else if(ds_PS.GetColumn(i, "FLAG") == "D") {
+		 
+			GDS_PARTS_SERVICE.DeleteRow(GDS_PARTS_SERVICE.FindRow("PS_IDX", ds_PS.GetColumn(i, "PS_IDX")));
+		 
+		 }
+
+	
+	}
+	
+	btn_search_OnClick();
+	
+}
+
+function ds_PS_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	
+	
+	if (strColumnID != "FLAG" && length(ds_PS.getColumn(nRow, "PS_IDX")) != 0) {
+	
+		
+		ds_PS.FireEvent = false;
+		
+		ds_PS.setColumn(nRow, "FLAG", "U");
+		
+		ds_PS.FireEvent = true;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}
+]]></Script>
+</Window>

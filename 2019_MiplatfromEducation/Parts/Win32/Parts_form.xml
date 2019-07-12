@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="form" Left="8" OnLoadCompleted="form_OnLoadCompleted" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_Parts" OnColumnChanged="ds_Parts_OnColumnChanged"></Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_price_type">
+				<Contents>
+					<colinfo id="CODE" size="256" summ="default" type="STRING"/>
+					<record>
+						<CODE></CODE>
+					</record>
+					<record>
+						<CODE>도매가</CODE>
+					</record>
+					<record>
+						<CODE>소매가</CODE>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Align="Center" BKColor="BTNSHADOW" Border="RaisedEdge" DkshadowColor="SCROLLBAR" Face3dColor="dimgray" Font="맑은&#32;고딕,14,Bold" Height="104" Hilight3dColor="APPWORKSPACE" Id="st_top" ShadowColor="INACTIVECAPTION" TabOrder="15" Width="782"></Static>
+		<Edit Height="24" Id="pd_name" Left="88" TabOrder="4" Top="64" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="st_" Left="8" TabOrder="16" Text="제품명" Top="72" Width="73"></Static>
+		<Static Align="Right" Height="13" Id="Static0" Left="391" TabOrder="17" Text="~" Top="67" Width="49"></Static>
+		<Button Font="굴림,11,Bold" Height="32" Id="btn_search" Left="600" OnClick="btn_search_OnClick" TabOrder="14" Text="조&#32;회" Top="64" Width="80"></Button>
+		<Static Align="Center" BKColor="darkseagreen" Font="맑은&#32;고딕,14,Bold" Height="161" Id="Static2" Left="2" TabOrder="18" Top="370" Width="780"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static3" Left="8" TabOrder="19" Text="제품명" Top="384" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_ID" Height="32" Id="edit_id" Left="72" TabOrder="8" Top="376" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static1" Left="215" TabOrder="20" Text="가&#32;&#32;격" Top="67" Width="73"></Static>
+		<Edit Height="24" Id="pd_min_price" Left="296" TabOrder="6" Top="64" Width="121"></Edit>
+		<Edit Height="24" Id="pd_max_price" Left="456" TabOrder="7" Top="64" Width="121"></Edit>
+		<Button Font="Tahoma,11" Height="32" Id="btn_insert" Left="432" OnClick="btn_insert_OnClick" TabOrder="1" Text="추&#32;&#32;가" Top="376" Width="80"></Button>
+		<Button Font="Tahoma,11" Height="32" Id="btn_delete" Left="520" OnClick="btn_delete_OnClick" TabOrder="0" Text="삭&#32;&#32;제" Top="376" Width="80"></Button>
+		<Static Color="snow" Font="Tahoma,25" Height="48" Id="Static9" Left="480" TabOrder="21" Text="부&#32;&#32;품&#32;&#32;관&#32;&#32;리" Top="8" Width="264"></Static>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static4" Left="8" TabOrder="22" Text="도매가" Top="424" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_WHOLESALES_PRICE" Height="29" Id="edit_whole" Left="72" TabOrder="10" Top="416" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static6" Left="7" TabOrder="23" Text="이미지" Top="464" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_IMG" Height="29" Id="edit_img" Left="72" TabOrder="12" Top="456" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static7" Left="7" TabOrder="24" Text="재&#32;&#32;고" Top="504" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_STOCK" Height="29" Id="edit_stock" Left="72" TabOrder="13" Top="496" Width="121"></Edit>
+		<Grid AutoFit="TRUE" BindDataset="ds_Parts" BkColor2="default" BoldHead="true" Bottom="371" Enable="true" EndLineColor="default" Height="267" Id="grd_List" InputPanel="FALSE" LineColor="default" MinWidth="100" Right="784" TabOrder="25" TabStop="true" Top="104" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="784">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="25"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="50"/>
+					</columns>
+					<head>
+						<cell col="0" display="text"/>
+						<cell col="1" display="text" text="제품ID"/>
+						<cell col="2" display="text" text="제품명"/>
+						<cell col="3" display="text" text="도매가"/>
+						<cell col="4" display="text" text="소매가"/>
+						<cell col="5" display="text" text="이미지"/>
+						<cell col="6" display="text" text="재고"/>
+					</head>
+					<body>
+						<cell col="0" colid="FLAG" combodataset="ds_Parts" display="text"/>
+						<cell col="1" colid="PD_ID" combodataset="ds_Parts" display="text"/>
+						<cell col="2" colid="PD_NM" combodataset="ds_Parts" display="text"/>
+						<cell col="3" colid="PD_WHOLESALES_PRICE" combodataset="ds_Parts" display="text"/>
+						<cell col="4" colid="PD_RETAIL_PRICE" combodataset="ds_Parts" display="text"/>
+						<cell col="5" colid="PD_IMG" combodataset="ds_Parts" display="text"/>
+						<cell col="6" colid="PD_STOCK" combodataset="ds_Parts" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static8" Left="8" TabOrder="26" Text="제품ID" Top="24" Width="73"></Static>
+		<Edit Height="24" Id="pd_id" Left="88" TabOrder="3" Top="16" Width="121"></Edit>
+		<Static Align="Right" Font="굴림,11,Bold" Height="37" Id="Static10" Left="216" TabOrder="27" Text="가격타입" Top="24" Width="73"></Static>
+		<Combo CodeColumn="CODE" DataColumn="CODE" Height="21" Id="pd_price_type" INDEX="0" InnerDataset="ds_price_type" Left="297" TabOrder="5" Top="22" Width="127"></Combo>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static5" Left="192" TabOrder="28" Text="제품명" Top="384" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_NM" Height="32" Id="edit_name" Left="256" TabOrder="9" Top="376" Width="121"></Edit>
+		<Static Align="Right" Font="Tahoma,11" Height="32" Id="Static11" Left="192" TabOrder="29" Text="소매가" Top="424" Width="57"></Static>
+		<Edit BindDataset="ds_Parts" Column="PD_RETAIL_PRICE" Height="32" Id="edit_retail" Left="256" TabOrder="11" Top="416" Width="121"></Edit>
+		<Button Font="Tahoma,16,Bold" Height="52" Id="btn_final" Left="448" OnClick="btn_final_OnClick" TabOrder="30" Text="변경사항&#32;저장" Top="424" Width="133"></Button>
+		<Button Font="굴림,11,Bold" Height="32" Id="btn_return" Left="688" OnClick="btn_return_OnClick" TabOrder="31" Text="되돌리기" Top="64" Width="80"></Button>
+	</Form>
+	<Script><![CDATA[//폼이 로드될때
+function form_OnLoadCompleted(obj)
+{
+	ds_Parts.Copy("GDS_PRODUCT");
+	
+	ds_Parts.AddColumn("FLAG");
+	
+	
+}
+
+//조회버튼
+function btn_search_OnClick(obj)
+{
+	ds_Parts.Copy("GDS_PRODUCT");
+	
+	ds_Parts.AddColumn("FLAG");
+	
+	
+	var pFilter = "";
+	
+		
+	if (length(pd_id.value) != 0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PD_ID=="+quote(pd_id.Text);
+	}
+	
+	
+	
+	if(length(pd_price_type.Value) != 0) {
+	
+		if(length(pFilter) != 0) pFilter += " && ";
+				//도매/소매 가격으로 조회 
+			if(pd_price_type == "소매가") {
+				
+				var min = ToNumber(pd_min_price);
+				var max = ToNumber(pd_max_price);
+				
+				pFilter += min + "<=PD_RETAIL_PRICE && " + max + ">= PD_RETAIL_PRICE";
+
+			} else if(pd_price_type == "도매가") {
+			
+				var min = ToNumber(pd_min_price);
+				var max = ToNumber(pd_max_price);
+				
+				pFilter += min + "<=PD_WHOLESALES_PRICE && " + max + ">= PD_WHOLESALES_PRICE";
+
+			}
+
+	}
+	
+	
+	if (length(pd_name.value) != 0) {
+		
+		if (length(pFilter) !=0) pFilter += " && ";
+		
+		pFilter += "PD_NM=="+quote(pd_name.Text);
+	}	
+	
+	
+	//alert(pFilter);
+	
+	ds_Parts.Filter(pFilter);
+}
+
+//추가버튼
+function btn_insert_OnClick(obj)
+{
+	//ds_List에 한줄추가
+	ds_Parts.AddRow();
+	//ds_List 데이터셋에서 getLastRow로 마지막 인덱스를 찾아서 그 인덱스번호에 FLAG컬럼에 I라는 값을 입력
+	ds_Parts.setColumn(ds_Parts.GetLastRow(), "FLAG", "I");
+	
+	edit_id.value = "";
+	
+	edit_name.value = "";
+	
+	edit_whole.value= "";
+	
+	edit_retail.value = "";
+	
+	edit_img.value = "";
+	
+	edit_stock.value = "";
+}
+
+
+//삭제버튼
+function btn_delete_OnClick(obj)
+{
+	//FLAG에 I면 바로 삭제
+	if ( ds_Parts.getColumn(grd_List.CurrentRow, "FLAG") == "I") {
+		
+		ds_Parts.DeleteRow(grd_List.CurrentRow);
+		
+		return;
+	}
+	//그리드에 현재 선택된 인덱스에 FLAG컬럼에 D라는 값을 추가한다
+	ds_Parts.setColumn(grd_List.CurrentRow, "FLAG", "D");
+}
+
+
+
+function ds_Parts_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	
+	
+	if (strColumnID != "FLAG" && length(ds_Parts.GetColumn(nRow, "PD_IDX")) != 0) {
+	
+		//FireEvent가 false면 데이터셋이 변경되도 화면이 깜빡이지 않음
+		ds_Parts.FireEvent = false;
+
+		ds_Parts.setColumn(nRow, "FLAG", "U");
+
+		ds_Parts.FireEvent = true;
+	}
+}
+
+
+
+
+
+function btn_final_OnClick(obj)
+{
+		
+	for (var i=0; i<ds_Parts.GetRowCount(); i++) {
+		
+		if (ds_Parts.getColumn(i, "FLAG") == "I") {
+			
+			GDS_PRODUCT.AddRow();
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.GetLastRow(), "PD_IDX", GDS_PRODUCT.GetLastRow());
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_ID", ds_Parts.getColumn(i, "PD_ID"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_NM", ds_Parts.getColumn(i, "PD_NM"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_WHOLESALES_PRICE", ds_Parts.getColumn(i, "PD_WHOLESALES_PRICE"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_RETAIL_PRICE", ds_Parts.getColumn(i, "PD_RETAIL_PRICE"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_IMG", ds_Parts.getColumn(i, "PD_IMG"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "PD_STOCK", ds_Parts.getColumn(i, "PD_STOCK"));
+			
+			GDS_PRODUCT.setColumn(GDS_PRODUCT.GetLastRow(), "NEW_YN", "Y");
+			
+			
+		} else if (ds_Parts.getColumn(i, "FLAG") == "U") {
+			
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_ID", ds_Parts.GetColumn(i, "PD_ID"));
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_NM", ds_Parts.GetColumn(i, "PD_NM"));
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_WHOLESALES_PRICE", ds_Parts.GetColumn(i, "PD_WHOLESALES_PRICE"));
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_RETAIL_PRICE", ds_Parts.GetColumn(i, "PD_RETAIL_PRICE"));
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_IMG", ds_Parts.GetColumn(i, "PD_IMG"));
+			
+			GDS_PRODUCT.SetColumn(GDS_PRODUCT.FindRow("PD_IDX", ds_Parts.GetColumn(i, "PD_IDX")), "PD_STOCK", ds_Parts.GetColumn(i, "PD_STOCK"));
+			
+		//ds_List의 i의 인덱스의 FLAG 컬럼값이 D와 같다면
+		} else if (ds_Parts.getColumn(i, "FLAG") == "D") {
+			
+			GDS_PRODUCT.DeleteRow(GDS_PRODUCT.FindRow("PD_ID", ds_Parts.getColumn(i, "PD_ID")));
+						
+		}
+	}
+	
+	//for문이 끝나면 btn_serch_OnClick() 펑션을 실행한다.
+	btn_search_OnClick();
+}
+
+function btn_return_OnClick(obj)
+{
+	ds_Parts.UnFilter();
+}
+]]></Script>
+</Window>
